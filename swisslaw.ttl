@@ -1,0 +1,253 @@
+@prefix : <https://github.com/mathiasrichter/semanticlaw/blob/main/swisslaw.ttl/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+
+#############################
+# Vocabulary/Model
+#############################
+
+:TextElement a rdfs:Class ;
+.
+
+:numOrdinal a rdfs:Property ;
+    rdfs:domain :TextElement ;
+    rdfs:range :TextElement ;
+    sh:path :numberOrdinal ;
+    sh:datatype xsd:integer ;
+.
+
+:charOrdinal a rdfs:Property ;
+    sh:path :charOrdinal ;
+    sh:datatype xsd:string ;
+.
+
+:next a rdfs:Property ;
+    rdfs:domain :TextElement ;
+    rdfs:range :TextElement ;
+    sh:path :next ;
+    sh:class :TextElement ;
+    sh:minCount 0 ;
+    sh:maxCount 1 ;
+.
+
+:prev a rdfs:Property ;
+    rdfs:domain :TextElement ;
+    rdfs:range :TextElement ;
+    sh:path :next ;
+    sh:class :TextElement ;
+    sh:minCount 0 ;
+    sh:maxCount 1 ;
+.
+
+:parent a rdfs:Property ;
+    rdfs:domain :TextElement ;
+    rdfs:range :TextElement ;
+    sh:path :parent ;
+    sh:class :TextElement ;
+    sh:minCount 0 ;
+    sh:maxCount 1 ;
+.
+
+:title a rdfs:Property ;
+    rdfs:domain :TextElement ;
+    rdfs:range xsd:string ;
+    sh:path :title ;
+    sh:pattern "^\\s*(\\S[\\s\\S]*\\S)\\s*$" ; # multline string
+    sh:languageIn ("de" "it" "fr") ;
+    sh:minCount 0 ;
+    sh:maxCount 1 ;
+    sh:minLength 5 ;
+.
+
+:content a rdfs:Property ;
+    rdfs:domain :TextElement ;
+    rdfs:range xsd:string ;
+    sh:path :content ;
+    sh:pattern "^\\s*(\\S[\\s\\S]*\\S)\\s*$" ; # multline string
+    sh:languageIn ("de" "it" "fr") ;
+    sh:minCount 0 ;
+    sh:maxCount 1 ;
+    sh:minLength 5 ;
+.
+
+:ord a rdfs:Property ;
+    rdfs:domain :TextElement ;
+    rdfs:range xsd:integer, xsd:string ;
+    sh:path :ord ;
+    sh:or ( 
+        [ sh:datatype xsd:integer ]
+        [ sh:datatype xsd:string ]
+    ) ;
+    sh:minCount 0 ;
+    sh:maxCount 1 ;
+.
+
+:TextElementShape a sh:NodeShape ;
+    sh:targetClass :TextElement ;
+    sh:property :parent, :prev, :next, :title, :content, :ord ;
+.
+
+:Document a rdfs:Class ;
+    rdfs:subClassOf :TextElement ;
+.
+
+:DocumentShape a sh:NodeShape ;
+    sh:targetClass :Document ;
+    sh:property [
+        sh:path :title ;
+        sh:minCount 1 ;
+    ] ;
+    sh:property [
+        sh:path dct:created ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:date ;
+    ] ;
+    sh:property [
+        sh:path dct:modified ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:date ;
+    ] ;
+.
+
+:Bundesgesetz a rdfs:Class ;
+    rdfs:subClassOf :Document ;
+.
+
+:Bundesverordnung a rdfs:Class ;
+    rdfs:subClassOf :Document ;
+.
+
+:Kantonsgesetz a rdfs:Class ;
+    rdfs:subClassOf :Document ;
+.
+
+:Kantonsverordnung a rdfs:Class ;
+    rdfs:subClassOf :Document ;
+.
+
+:Kantonsverfügung a rdfs:Class ;
+    rdfs:subClassOf :Document ;
+.
+
+:Artikel a rdfs:Class ;
+    rdfs:subClassOf :TextElement ;
+.
+
+:ArtikelShape a sh:NodeShape ;
+    sh:targetClass :Artikel ;
+    sh:property [
+        sh:path :parent ;
+        sh:or (
+            [ sh:class :Bundesgesetz ]
+            [ sh:class :Bundesverordnung ]
+            [ sh:class :Abschnitt ]
+        ) ;
+    ] ;
+    sh:property [
+        sh:path :ord ;
+        sh:minCount 1;
+        sh:datatype xsd:integer ;
+    ];
+.
+
+:Paragraph a rdfs:Class ;
+    rdfs:subClassOf :TextElement ;
+.
+
+:ParagraphShape a sh:NodeShape ;
+    sh:targetClass :Paragraph ;
+    sh:property [
+        sh:path :parent ;
+        sh:or (
+            [ sh:class :Kantonsgesetz ]
+            [ sh:class :Kantonsverordnung ]
+        ) ;
+    ] ;
+    sh:property [
+        sh:path [ sh:alternativePath (:numOrdinal :charOrdinal) ] ;
+    ];
+    sh:property [
+        sh:path :ord ;
+        sh:minCount 1;
+        sh:datatype xsd:integer ;
+    ];
+.
+
+:Abschnitt a rdfs:Class ;
+    rdfs:subClassOf :TextElement ;
+    sh:property [
+        sh:path [ sh:alternativePath (:numOrdinal :charOrdinal) ] ;
+    ];
+    sh:property [
+        sh:path :ord ;
+        sh:minCount 1;
+    ];
+.
+
+:AbschnittShape a sh:NodeShape ;
+    sh:targetClass :Abschnitt ;
+    sh:property [
+        sh:path :parent ;
+        sh:class :Document ;
+    ] ;
+    sh:property [
+        sh:path :ord ;
+        sh:minCount 1;
+    ];
+.
+
+:Absatz a rdfs:Class ;
+    rdfs:subClassOf :TextElement ;
+.
+
+:AbsatzShape a sh:NodeShape ;
+    sh:targetClass :Absatz ;
+    sh:property [
+        sh:path :parent ;
+        sh:or (
+            [ sh:class :Artikel ]
+            [ sh:class :Paragraph ]
+            [ sh:class :Absatz ]
+        ) ;
+    ] ;
+    sh:property [
+        sh:path :ord ;
+        sh:datatype xsd:integer ;
+        sh:minCount 1 ;
+    ];
+    sh:property [
+        sh:path :content ;
+        sh:minCount 1;
+    ] ;
+.
+
+:Litera a rdfs:Class ;
+    rdfs:subClassOf :TextElement ;
+.
+
+:LiteraShape a sh:NodeShape ;
+    sh:targetClass :Litera ;
+    sh:property [
+        sh:path :parent ;
+        sh:or (
+            [ sh:class :Artikel ]
+            [ sh:class :Paragraph ]
+            [ sh:class :Absatz ]
+        ) ;
+    ] ;
+    sh:property [
+        sh:path :ord ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+    ];
+    sh:property [
+        sh:path :content ;
+        sh:minCount 1;
+    ] ;
+.
+
