@@ -1,0 +1,56 @@
+@prefix : <http://example.org/> .
+@prefix sl: <https://raw.githubusercontent.com/mathiasrichter/semanticlaw/main/swisslaw.ttl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+:bundesgeseua a sl:Absatz ;
+    sl:content "Es stellt Grundsätze auf, nach denen die Kantone die Jagd zu regeln haben." ;
+    sl:ord 2 ;
+    sl:parent :bundesgeseu4 ;
+    sl:prev :bundesgeseu9 .
+
+:bundesgeseu6 a sl:Litera ;
+    sl:content "die Artenvielfalt und die Lebensräume der einheimischen und ziehenden wildlebenden Säugetiere und Vögel zu erhalten"@de ;
+    sl:ord "a" ;
+    sl:parent :bundesgeseu5 ;
+    sl:prev :bundesgeseu5 .
+
+:bundesgeseu7 a sl:Litera ;
+    sl:content "bedrohte Tierarten zu schützen"@de ;
+    sl:ord "b" ;
+    sl:parent :bundesgeseu5 ;
+    sl:prev :bundesgeseu6 .
+
+:bundesgeseu8 a sl:Litera ;
+    sl:content "die von wildlebenden Tieren verursachten Schäden an Wald und an landwirt- schaftlichen Kulturen auf ein tragbares Mass zu begrenzen"@de ;
+    sl:ord "c" ;
+    sl:parent :bundesgeseu5 ;
+    sl:prev :bundesgeseu7 .
+
+:bundesgeseu9 a sl:Litera ;
+    sl:content "eine angemessene Nutzung der Wildbestände durch die Jagd zu gewährleis- ten."@de ;
+    sl:ord "d" ;
+    sl:parent :bundesgeseu5 ;
+    sl:prev :bundesgeseu8 .
+
+:bundesgeseu2 a sl:Bundesgesetz ;
+    sl:content "Die Bundesversammlung der Schweizerischen Eidgenossenschaft, gestützt auf die Artikel 74 Absatz 1, 78 Absatz 4, 79 und 80 Absatz 1 der Bundesverfassung1,2 nach Einsicht in eine Botschaft des Bundesrates vom 27. April 19833 beschliesst:"@de ;
+    sl:title "Bundesgesetz über die Jagd und den Schutz wildlebender Säugetiere und Vögel (Jagdgesetz, JSG)"@de .
+
+:bundesgeseu3 a sl:Abschnitt ;
+    sl:ord 1 ;
+    sl:parent :bundesgeseu2 ;
+    sl:prev :bundesgeseu2 ;
+    sl:title "Zweck und Geltungsbereich"@de .
+
+:bundesgeseu4 a sl:Artikel ;
+    sl:ord 1 ;
+    sl:parent :bundesgeseu3 ;
+    sl:prev :bundesgeseu3 ;
+    sl:title "Zweck"@de .
+
+:bundesgeseu5 a sl:Absatz ;
+    sl:content "Dieses Gesetz bezweckt:"@de ;
+    sl:ord 1 ;
+    sl:parent :bundesgeseu4 ;
+    sl:prev :bundesgeseu4 .
+
