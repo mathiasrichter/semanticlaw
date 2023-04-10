@@ -405,7 +405,7 @@ class CommandlineCollector(cmd2.Cmd):
             pos = frame.type + ( (" " + str(frame.ord)) if frame.ord is not None else "")
             if self.collector.is_collecting():
                 pos += ' ' + self.collector.cur_mode
-        self.print_status()
+        print('['+ str(self.collector.text.line_no)+'/'+ str(len(self.collector.text.text)-1) + ' ' + pos + '] ' + self.collector.get_line())
 
         
     def do_start(self, line:str):
