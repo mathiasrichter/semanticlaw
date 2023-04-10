@@ -89,8 +89,12 @@ class SequencedStack:
     
     def to_string(self) -> str:
         result = ''
+        i = 0
         for f in self.hierarchy:
-            result += f.type + " " + (str(f.ord) if f.ord is not None else "") + "\n"
+            result += "[" + i + "]" + f.type + " " + (str(f.ord) if f.ord is not None else "") + "\n"
+            i+=1
+        if result == '':
+            result = '[empty]'
         return result
 
 class StructureError(Exception):
@@ -208,12 +212,12 @@ class Collector(SequencedStack):
         
     def cancel(self):
         if self.top() is not None:
-            self.text.line_no = self.top().line_no
             self.remove()
-            self.cur_mode = None
-            self.cur_start = None
             if self.top() is not None:
                 self.top().next = None        
+        self.text.line_no = self.top().line_no if self.top() is not None else 0
+        self.cur_mode = None
+        self.cur_start = None
         
         
     def next_line(self):
