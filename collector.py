@@ -87,14 +87,31 @@ class SequencedStack:
     def length(self) -> int:
         return len(self.sequence)
     
-    def to_string(self) -> str:
+    def stack_to_string(self) -> str:
         result = ''
         i = 0
         for f in self.hierarchy:
-            result += "[" + i + "]" + f.type + " " + (str(f.ord) if f.ord is not None else "") + "\n"
+            result += "[" + str(i) + "]" + f.type + ((" " + str(f.ord)) if f.ord is not None else "") + "\n"
             i+=1
         if result == '':
             result = '[empty]'
+        else:
+            result = result[0:len(result)-2]
+        return result
+
+    def sequence_to_string(self, last_count:int = 5) -> str:
+        result = ''
+        r = range(0, self.length())
+        if last_count >= 0 and last_count < self.length():
+            r = range(self.length() - last_count, self.length())
+        for i in r:
+            f = self.sequence[i]
+            result += "[" + str(i) + "]" + f.type + ((" " + str(f.ord)) if f.ord is not None else "") + "\n"
+            i+=1
+        if result == '':
+            result = '[empty]'
+        else:
+            result = result[0:len(result)-2]
         return result
 
 class StructureError(Exception):
@@ -238,8 +255,8 @@ class Collector(SequencedStack):
     def get_line(self):
         return self.text.get_line()
         
-    def get_next_int_ord(self, type :str, parent :str) -> int:
-        siblings = list(filter(lambda f: True if f.type==type and f.parent==parent and f.ord is not None and type(f.ord) == int else False, self.sequence))
+    def get_next_int_ord(self, clazz :str, parent :str) -> int:
+        siblings = list(filter(lambda f: True if f.type==clazz and f.parent==parent and f.ord is not None and type(f.ord) == int else False, self.sequence))
         siblings.sort(key=lambda x: x.ord)
         if len(siblings) > 0:
             return siblings[-1].ord + 1
@@ -286,45 +303,45 @@ class Collector(SequencedStack):
             raise TypeError("Unkown document type '{}'".format(type))
         self.push(Frame(self.new_id(), line_no=self.text.line_no, type=type))
         
-    def start_title(self):
+    def new_title(self):
         if self.top() and self.top().type in [self.ABS, self.LIT, self.TITLE, self.CONT]:
             raise StructureError("Cannot open title scope in {}".format(self.top().type))
         self.start_collect(self.TITLE)
 
-    def start_content(self):
+    def new_content(self):
         if self.top() and self.top().type in [self.ABSCH, self.TITLE, self.CONT]:
             raise StructureError("Cannot open content scope in {}".format(self.top().type))
         self.start_collect(self.CONT)
     
-    def start_abschnitt(self):
+    def new_abschnitt(self):
         if self.top() and self.top().type in [self.TITLE, self.CONT, self.ART, self.PAR, self.ABS, self.LIT]:
             raise StructureError("Cannot open abschnitt scope in {}".format(self.top().type))
         f = Frame(self.new_id(), line_no=self.text.line_no, type=self.ABSCH)
         self.push(f)
         f.ord = self.get_next_int_ord(self.ABSCH, f.parent)
         
-    def start_article(self):
+    def new_article(self):
         if self.top() and self.top().type in [self.TITLE, self.CONT, self.ART, self.PAR, self.ABS, self.LIT]:
             raise StructureError("Cannot open article scope in {}".format(self.top().type))
         f = Frame(self.new_id(), line_no=self.text.line_no, type=self.ART)
         self.push(f)
         f.ord = self.get_next_int_ord(self.ART, f.parent)
         
-    def start_paragraph(self):
+    def new_paragraph(self):
         if self.top() and self.top().type in [self.TITLE, self.CONT, self.ART, self.PAR, self.ABS, self.LIT]:
             raise StructureError("Cannot open paragraph scope in {}".format(self.top().type))
         f = Frame(self.new_id(), line_no=self.text.line_no, type=self.PAR)
         self.push(f)
         f.ord = self.get_next_int_ord(self.PAR, f.parent)
 
-    def start_absatz(self):
+    def new_absatz(self):
         if self.top() and self.top().type in [self.TITLE, self.CONT, self.ABS, self.LIT, self.BG, self.BV, self.KG, self.KV, self.KVO]:
             raise StructureError("Cannot open absatz scope in {}".format(self.top().type))
         f = Frame(self.new_id(), line_no=self.text.line_no, type=self.ABS)
         self.push(f)
         f.ord = self.get_next_int_ord(self.ABS, f.parent)
 
-    def start_litera(self):
+    def new_litera(self):
         if self.top() and self.top().type in [self.TITLE, self.CONT, self.BG, self.BV, self.KG, self.KV, self.KVO]:
             raise StructureError("Cannot open litera scope in {}".format(self.top().type))
         f = Frame(self.new_id(), line_no=self.text.line_no, type=self.LIT)
@@ -394,6 +411,16 @@ class CommandlineCollector(cmd2.Cmd):
             self.collector.new_document(line)
         elif line.lower() == self.collector.KVO.lower():
             self.collector.new_document(line)
+        elif self.collector.ABSCH.lower().startswith(line.lower()):
+            self.collector.new_abschnitt()
+        elif self.collector.ABS.lower().startswith(line.lower()):
+            self.collector.new_absatz()
+        elif self.collector.PAR.lower().startswith(line.lower()):
+            self.collector.new_paragraph()
+        elif self.collector.ART.lower().startswith(line.lower()):
+            self.collector.new_article()
+        elif self.collector.LIT.lower().startswith(line.lower()):
+            self.collector.new_litera()
         else:
             print("Unknown type:",line)
         self.print_status()
@@ -410,29 +437,13 @@ class CommandlineCollector(cmd2.Cmd):
             if self.collector.is_collecting():
                 pos += ' ' + self.collector.cur_mode
         print('['+ str(self.collector.text.line_no)+'/'+ str(len(self.collector.text.text)-1) + ' ' + pos + '] ' + self.collector.get_line())
-
         
-    def do_start(self, line:str):
-        if self.collector.ABSCH.lower().startswith(line.lower()):
-            self.collector.start_abschnitt()
-        elif self.collector.ABS.lower().startswith(line.lower()):
-            self.collector.start_absatz()
-        elif self.collector.PAR.lower().startswith(line.lower()):
-            self.collector.start_paragraph()
-        elif self.collector.ART.lower().startswith(line.lower()):
-            self.collector.start_article()
-        elif self.collector.LIT.lower().startswith(line.lower()):
-            self.collector.start_litera()
-        else:
-            print("Unknown type:",line)
-        self.print_status()
-
     def do_title(self, line:str):
-        self.collector.start_title()
+        self.collector.new_title()
         self.print_status()
         
     def do_content(self, line:str):
-        self.collector.start_content()
+        self.collector.new_content()
         self.print_status()
         
     def do_next(self, line:str):
@@ -455,7 +466,14 @@ class CommandlineCollector(cmd2.Cmd):
         self.print_status()
         
     def do_stack(self, line:str):
-        print(self.collector.to_string())
+        print(self.collector.stack_to_string())
+        self.print_status()
+        
+    def do_seq(self, line:str):
+        if line.isdigit():
+            print(self.collector.sequence_to_string(int(line)))
+        else:
+            print(self.collector.sequence_to_string())
         self.print_status()
         
     def do_cancel(self, line:str):
