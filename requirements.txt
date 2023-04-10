@@ -2,3 +2,4 @@ cmd2
 rdflib
 pyshacl
 erdi8
+pdfminer.six
