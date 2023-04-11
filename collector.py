@@ -7,6 +7,7 @@ from erdi8 import Erdi8
 import cmd2
 from pdfminer.high_level import extract_text
 from functools import cmp_to_key
+import json
 
 class Frame:
     def __init__(
@@ -30,6 +31,33 @@ class Frame:
         self.ord = ord
         self.title = title
         self.content = content
+        
+    def serialize(self):
+        return {
+            'id': self.id,
+            'line_no': self.line_no,
+            'type': self.type,
+            'parent': self.parent,
+            'prev': self.prev,
+            'next': self.next,
+            'ord' : self.ord,
+            'title' : self.title,
+            'content' : self.content
+        } 
+    
+    @classmethod
+    def deserialize(self, state:dict):
+        f = Frame(state['id'])
+        f.line_no = state['line_no']
+        f.type = state['type']
+        f.parent = state['parent']
+        f.prev = state['prev']
+        f.next = state['next']
+        f.ord = state['ord']
+        f.title = state['title']
+        f.content = state['content']      
+        return f  
+        
 
 class StackEmptyError(Exception):
     
@@ -208,13 +236,10 @@ class Collector(SequencedStack):
     CONT = "cont"
     
     CHAR_ORD = CharacterOrdinal()
+    ID = Erdi8()
     
     last_id = None
-    id = Erdi8()
-    stack = SequencedStack()
-    sequence = []
-    text = None
-    
+    text = None    
     cur_mode = None
     cur_start = None
     
@@ -225,8 +250,43 @@ class Collector(SequencedStack):
         for i in range(0,len(orig)):
             if orig[i] not in "23456789abcdefghijkmnopqrstuvwxyz":
                 start = start.replace(orig[i], "")
-        self.last_id = self.id.increment(start)
+        self.last_id = self.ID.increment(start)
         
+    def serialize(self, file_name:str):
+        s = []
+        for f in self.sequence:
+            s.append(f.serialize())
+        h = []
+        for f in self.hierarchy:
+            h.append(f.id)
+        state = {
+            'last_id': self.last_id,
+            'sequence': s,
+            'hierarchy': h,
+            'text_line_no': self.text.line_no,
+            'cur_mode': self.cur_mode,
+            'cur_start': self.cur_start
+        }
+        with open(file_name, 'w') as f:
+            json.dump(state, f, indent=4)
+        
+    def deserialize(self, file_name:str):
+        with open(file_name, 'r') as f:
+            state = json.load(f)
+            self.last_id = state['last_id']
+            self.sequence= []
+            lookup = {}
+            for d in state['sequence']:
+                f = Frame.deserialize(d)
+                self.sequence.append(f)
+                lookup[f.id] = f
+            self.hierarchy = []
+            for d in state['hierarchy']:
+                self.hierarchy.append(lookup[d])
+            self.text.line_no = state['text_line_no']
+            self.cur_mode = state['cur_mode']
+            self.cur_start = state['cur_start']
+
     def cancel(self):
         if self.top() is not None:
             self.remove()
@@ -256,7 +316,11 @@ class Collector(SequencedStack):
         return self.text.get_line()
         
     def get_next_int_ord(self, clazz :str, parent :str) -> int:
-        siblings = list(filter(lambda f: True if f.type==clazz and f.parent==parent and f.ord is not None and type(f.ord) == int else False, self.sequence))
+        siblings = []
+        if clazz in [self.ART, self.PAR]:
+            siblings = list(filter(lambda f: True if f.type==clazz and f.ord is not None and type(f.ord) == int else False, self.sequence))
+        else:
+            siblings = list(filter(lambda f: True if f.type==clazz and f.parent==parent and f.ord is not None and type(f.ord) == int else False, self.sequence))
         siblings.sort(key=lambda x: x.ord)
         if len(siblings) > 0:
             return siblings[-1].ord + 1
@@ -293,11 +357,11 @@ class Collector(SequencedStack):
         return ""
 
     def new_id(self):
-        self.last_id = self.id.increment(self.last_id)
+        self.last_id = self.ID.increment(self.last_id)
         return self.last_id
     
     def new_document(self, type:str):
-        if self.stack.depth() > 0:
+        if self.depth() > 0:
             raise StructureError("New dcoument cannot be opened within an existing scope.")
         if type not in self.TYPES:
             raise TypeError("Unkown document type '{}'".format(type))
@@ -478,6 +542,14 @@ class CommandlineCollector(cmd2.Cmd):
         
     def do_cancel(self, line:str):
         self.collector.cancel()
+        self.print_status()
+        
+    def do_savestate(self, line:str):
+        self.collector.serialize(line)
+        self.print_status()
+
+    def do_restorestate(self, line:str):
+        self.collector.deserialize(line)
         self.print_status()
 
 if __name__ == "__main__":
