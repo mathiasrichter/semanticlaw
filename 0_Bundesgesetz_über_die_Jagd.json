@@ -1,5 +1,5 @@
 {
-    "last_id": "bundesgesetzberdiejagdpfx",
+    "last_id": "bundesgesetzberdiejagdpgc",
     "sequence": [
         {
             "id": "bundesgesetzberdiejagdpdh",
@@ -865,16 +865,148 @@
             "type": "Absatz",
             "parent": "bundesgesetzberdiejagdpfr",
             "prev": "bundesgesetzberdiejagdpfw",
-            "next": null,
+            "next": "bundesgesetzberdiejagdpfy",
             "ord": 6,
             "title": null,
             "content": "6 Zu den Wasser- und Zugvogelreservaten von internationaler und nationaler Bedeu-\ntung  und  den  eidgen\u00f6ssischen  Jagdbanngebieten  erl\u00e4sst  der  Bundesrat  die  Schutz-\nbestimmungen. Der Bund gew\u00e4hrt den Kantonen auf der Grundlage von Programm-\nvereinbarungen globale Abgeltungen an die Kosten f\u00fcr die Aufsicht dieser Reservate \nund Gebiete.6 \n"
+        },
+        {
+            "id": "bundesgesetzberdiejagdpfy",
+            "line_no": 339,
+            "type": "Abschnitt",
+            "parent": "bundesgesetzberdiejagdpdh",
+            "prev": "bundesgesetzberdiejagdpfx",
+            "next": "bundesgesetzberdiejagdpfz",
+            "ord": 4,
+            "title": "4. Abschnitt: Wildschaden \n",
+            "content": null
+        },
+        {
+            "id": "bundesgesetzberdiejagdpfz",
+            "line_no": 341,
+            "type": "Artikel",
+            "parent": "bundesgesetzberdiejagdpfy",
+            "prev": "bundesgesetzberdiejagdpfy",
+            "next": "bundesgesetzberdiejagdpg3",
+            "ord": 12,
+            "title": "Art. 12 \n\nVerh\u00fctung von Wildschaden \n",
+            "content": null
+        },
+        {
+            "id": "bundesgesetzberdiejagdpg3",
+            "line_no": 345,
+            "type": "Absatz",
+            "parent": "bundesgesetzberdiejagdpfz",
+            "prev": "bundesgesetzberdiejagdpfz",
+            "next": "bundesgesetzberdiejagdpg4",
+            "ord": 1,
+            "title": null,
+            "content": "1 Die Kantone treffen Massnahmen zur Verh\u00fctung von Wildschaden. \n"
+        },
+        {
+            "id": "bundesgesetzberdiejagdpg4",
+            "line_no": 347,
+            "type": "Absatz",
+            "parent": "bundesgesetzberdiejagdpfz",
+            "prev": "bundesgesetzberdiejagdpg3",
+            "next": "bundesgesetzberdiejagdpg5",
+            "ord": 2,
+            "title": null,
+            "content": "2 Sie k\u00f6nnen jederzeit Massnahmen gegen einzelne  gesch\u00fctzte oder jagdbare Tiere, \ndie  erheblichen  Schaden  anrichten,  anordnen  oder  erlauben.  Mit  der  Durchf\u00fchrung \ndieser  Massnahmen  d\u00fcrfen  sie  nur  Jagdberechtigte  und  Aufsichtsorgane  beauftra-\ngen.7 \n\n2bis Der Bundesrat kann  gesch\u00fctzte Tierarten bezeichnen,  bei  denen das Bundesamt \ndie Massnahmen nach Absatz 2 anordnet.8 \n"
+        },
+        {
+            "id": "bundesgesetzberdiejagdpg5",
+            "line_no": 378,
+            "type": "Absatz",
+            "parent": "bundesgesetzberdiejagdpfz",
+            "prev": "bundesgesetzberdiejagdpg4",
+            "next": "bundesgesetzberdiejagdpg6",
+            "ord": 3,
+            "title": null,
+            "content": "3 Die Kantone bestimmen, welche Selbsthilfemassnahmen gegen jagdbare Tiere zum \nSchutze von Haustieren, Liegenschaften und landwirtschaftlichen Kulturen zul\u00e4ssig \nsind.9 Der Bundesrat bezeichnet die gesch\u00fctzten Tierarten, gegen die solche Selbst-\nhilfemassnahmen ergriffen werden d\u00fcrfen. \n"
+        },
+        {
+            "id": "bundesgesetzberdiejagdpg6",
+            "line_no": 383,
+            "type": "Absatz",
+            "parent": "bundesgesetzberdiejagdpfz",
+            "prev": "bundesgesetzberdiejagdpg5",
+            "next": "bundesgesetzberdiejagdpg7",
+            "ord": 4,
+            "title": null,
+            "content": "4 Weist  eine  gesch\u00fctzte  Tierart  einen  zu  hohen  Bestand  auf  und  entsteht  dadurch \ngrosser Schaden oder eine erhebliche  Gef\u00e4hrdung, so k\u00f6nnen die Kantone mit vor-\nheriger Zustimmung des Departements Massnahmen zur Verringerung des Bestandes \ntreffen. \n"
+        },
+        {
+            "id": "bundesgesetzberdiejagdpg7",
+            "line_no": 388,
+            "type": "Absatz",
+            "parent": "bundesgesetzberdiejagdpfz",
+            "prev": "bundesgesetzberdiejagdpg6",
+            "next": "bundesgesetzberdiejagdpg8",
+            "ord": 5,
+            "title": null,
+            "content": "5 Der Bund f\u00f6rdert und koordiniert die Massnahmen der Kantone zur Verh\u00fctung von \nWildschaden,  der  durch  Grossraubtiere  an  Nutztieren  verursacht  wird.10  Er  kann \ngegen  Entsch\u00e4digung  \u00f6ffentlich-rechtliche  K\u00f6rperschaften  oder  Private  mit  dem \nVollzug dieser Aufgaben beauftragen.11 \n"
+        },
+        {
+            "id": "bundesgesetzberdiejagdpg8",
+            "line_no": 393,
+            "type": "Artikel",
+            "parent": "bundesgesetzberdiejagdpfy",
+            "prev": "bundesgesetzberdiejagdpg7",
+            "next": "bundesgesetzberdiejagdpg9",
+            "ord": 13,
+            "title": "Art. 13 \n\nEntsch\u00e4digung von Wildschaden \n",
+            "content": null
+        },
+        {
+            "id": "bundesgesetzberdiejagdpg9",
+            "line_no": 397,
+            "type": "Absatz",
+            "parent": "bundesgesetzberdiejagdpg8",
+            "prev": "bundesgesetzberdiejagdpg8",
+            "next": "bundesgesetzberdiejagdpga",
+            "ord": 1,
+            "title": null,
+            "content": "1 Der Schaden, den jagdbare Tiere an Wald, landwirtschaftlichen Kulturen und Nutz-\ntieren  anrichten,  wird  angemessen  entsch\u00e4digt.  Ausgenommen  sind  Sch\u00e4den  durch \nTiere,  gegen  welche  nach  Artikel  12  Absatz  3  Selbsthilfemassnahmen  ergriffen \nwerden d\u00fcrfen. \n"
+        },
+        {
+            "id": "bundesgesetzberdiejagdpga",
+            "line_no": 402,
+            "type": "Absatz",
+            "parent": "bundesgesetzberdiejagdpg8",
+            "prev": "bundesgesetzberdiejagdpg9",
+            "next": "bundesgesetzberdiejagdpgb",
+            "ord": 2,
+            "title": null,
+            "content": "2 Die Kantone regeln die Entsch\u00e4digungspflicht. Entsch\u00e4digungen sind nur insoweit \nzu leisten, als es sich nicht um Bagatellsch\u00e4den handelt und die zumutbaren Mass-\nnahmen zur Verh\u00fctung von Wildschaden getroffen worden sind. Aufwendungen f\u00fcr \nVerh\u00fctungsmassnahmen  k\u00f6nnen  bei  der  Entsch\u00e4digung  von  Wildschaden  ber\u00fcck-\nsichtigt werden. \n"
+        },
+        {
+            "id": "bundesgesetzberdiejagdpgb",
+            "line_no": 408,
+            "type": "Absatz",
+            "parent": "bundesgesetzberdiejagdpg8",
+            "prev": "bundesgesetzberdiejagdpga",
+            "next": "bundesgesetzberdiejagdpgc",
+            "ord": 3,
+            "title": null,
+            "content": "3 Der Bund gew\u00e4hrt den Kantonen auf der Grundlage von Programmvereinbarungen \nglobale Abgeltungen an die Kosten f\u00fcr die Entsch\u00e4digung von Wildschaden, der auf \nein Reservat oder Gebiet nach Artikel 11 Absatz 6 zur\u00fcckzuf\u00fchren ist.12 \n"
+        },
+        {
+            "id": "bundesgesetzberdiejagdpgc",
+            "line_no": 412,
+            "type": "Absatz",
+            "parent": "bundesgesetzberdiejagdpg8",
+            "prev": "bundesgesetzberdiejagdpgb",
+            "next": null,
+            "ord": 4,
+            "title": null,
+            "content": "4 Bund und Kantone beteiligen sich an der Verg\u00fctung von Schaden, der durch Tiere \nbestimmter gesch\u00fctzter Arten verursacht wird. Der Bundesrat bestimmt nach Anh\u00f6-\nren der Kantone diese gesch\u00fctzten Tierarten und die Voraussetzungen der Entsch\u00e4-\ndigungspflicht. \n"
         }
     ],
     "hierarchy": [
         "bundesgesetzberdiejagdpdh"
     ],
-    "text_line_no": 339,
+    "text_line_no": 417,
     "cur_mode": null,
     "cur_start": null
 }

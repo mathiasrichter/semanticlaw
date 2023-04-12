@@ -293,7 +293,6 @@ class Collector(SequencedStack):
             for d in state['hierarchy']:
                 self.hierarchy.append(lookup[d])
             self.text.line_no = state['text_line_no']
-            print("*", self.text.line_no)
             self.cur_mode = state['cur_mode']
             self.cur_start = state['cur_start']
 
@@ -310,19 +309,21 @@ class Collector(SequencedStack):
         self.cur_mode = None
         self.cur_start = None
         
-        
+    def is_empty_line(self)->bool:
+        return ( re.match('^(\s)+$', self.get_line()) is not None ) or self.get_line() == ''
+    
     def next_line(self):
         self.text.next()
-        if self.get_line() == '\n' or self.get_line() == '\r' or self.get_line() == '':
+        if self.is_empty_line():
             self.next_line()
             
     def next_block(self) -> str:
         self.text.next()
         block = self.get_line()
-        while self.get_line() != '\n' and self.get_line() != '\r' and self.get_line() != '':
+        while self.is_empty_line() is False :
             self.text.next()
             block += '\n' + self.get_line()
-        if self.get_line() == '\n' or self.get_line() == '\r' or self.get_line() == '':
+        if self.is_empty_line():
             self.next_line()
         return block
         
@@ -500,11 +501,14 @@ class CommandlineCollector(cmd2.Cmd):
             self.collector.new_article()
         elif self.collector.LIT.lower().startswith(line.lower()):
             self.collector.new_litera()
+            self.collector.new_content()
         else:
             print("Unknown type:",line)
         self.print_status()
 
     def do_end(self, line):
+        if self.collector.last().type == self.collector.LIT and self.collector.is_collecting():
+            self.collector.end()
         self.collector.end()
         self.print_status()
         self.collector.serialize()
@@ -516,7 +520,7 @@ class CommandlineCollector(cmd2.Cmd):
             pos = frame.type + ( (" " + str(frame.ord)) if frame.ord is not None else "")
             if self.collector.is_collecting():
                 pos += ' ' + self.collector.cur_mode
-        print('['+ str(self.collector.text.line_no)+'/'+ str(len(self.collector.text.text)-1) + ' ' + pos + '] ' + self.collector.get_line())
+        print('['+ str(self.collector.text.line_no)+'/'+ str(len(self.collector.text.text)-1) + ' ' + pos + '] ' + '"' +self.collector.get_line() + '"')
         
     def do_title(self, line:str):
         self.collector.new_title()
@@ -532,9 +536,6 @@ class CommandlineCollector(cmd2.Cmd):
         
     def do_block(self, line:str):
         print(self.collector.next_block())
-        self.print_status()
-        
-    def do_line(self, line:str):
         self.print_status()
         
     def do_show(self, line:str):
@@ -558,6 +559,7 @@ class CommandlineCollector(cmd2.Cmd):
         
     def do_cancel(self, line:str):
         self.collector.cancel()
+        self.collector.serialize()
         self.print_status()
         
     def do_savestate(self, line:str):
