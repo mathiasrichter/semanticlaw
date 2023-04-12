@@ -93,9 +93,13 @@ class SequencedStack:
         self.hierarchy.append(frame)
         self.append(frame)
         
-    def remove(self):
+    def remove_top(self):
         if self.depth() > 0:
             self.hierarchy.pop()
+            self.sequence.pop()
+    
+    def remove_last(self):
+        if self.length() > 0:
             self.sequence.pop()
     
     def pop(self) -> Frame:
@@ -243,7 +247,10 @@ class Collector(SequencedStack):
     cur_mode = None
     cur_start = None
     
+    file_name = None
+    
     def __init__(self, filename:str):
+        self.file_name = filename[0:filename.rfind('.')]
         self.text = Text(filename)
         start = filename.lower()
         orig = filename.lower()
@@ -252,7 +259,9 @@ class Collector(SequencedStack):
                 start = start.replace(orig[i], "")
         self.last_id = self.ID.increment(start)
         
-    def serialize(self, file_name:str):
+    def serialize(self, file_name:str = None):
+        if file_name is None or file_name == '':
+            file_name = self.file_name + ".json"
         s = []
         for f in self.sequence:
             s.append(f.serialize())
@@ -284,15 +293,20 @@ class Collector(SequencedStack):
             for d in state['hierarchy']:
                 self.hierarchy.append(lookup[d])
             self.text.line_no = state['text_line_no']
+            print("*", self.text.line_no)
             self.cur_mode = state['cur_mode']
             self.cur_start = state['cur_start']
 
     def cancel(self):
-        if self.top() is not None:
-            self.remove()
+        if self.last() is not None and self.top() is not None and self.last() == self.top():
+            self.remove_top()
             if self.top() is not None:
                 self.top().next = None        
-        self.text.line_no = self.top().line_no if self.top() is not None else 0
+        elif self.last() is not None and self.top() is not None and self.last() != self.top():
+            self.remove_last()
+            if self.last() is not None:
+                self.last().next = None
+        self.text.line_no = self.last().line_no if self.last() is not None else 0
         self.cur_mode = None
         self.cur_start = None
         
@@ -349,6 +363,7 @@ class Collector(SequencedStack):
             raise StructureError("Not currently collecting text.")
         result = self.get_collect_content()
         self.cur_start = None
+        self.cur_mode = None
         return result
     
     def get_collect_content(self):
@@ -492,6 +507,7 @@ class CommandlineCollector(cmd2.Cmd):
     def do_end(self, line):
         self.collector.end()
         self.print_status()
+        self.collector.serialize()
         
     def print_status(self):
         frame = self.collector.top()
