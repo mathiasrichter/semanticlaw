@@ -495,6 +495,7 @@ class CommandlineCollector(cmd2.Cmd):
             self.collector.new_abschnitt()
         elif self.collector.ABS.lower().startswith(line.lower()):
             self.collector.new_absatz()
+            self.collector.new_content()
         elif self.collector.PAR.lower().startswith(line.lower()):
             self.collector.new_paragraph()
         elif self.collector.ART.lower().startswith(line.lower()):
@@ -507,7 +508,7 @@ class CommandlineCollector(cmd2.Cmd):
         self.print_status()
 
     def do_end(self, line):
-        if self.collector.last().type == self.collector.LIT and self.collector.is_collecting():
+        if self.collector.last().type in [ self.collector.LIT, self.collector.ABS ] and self.collector.is_collecting():
             self.collector.end()
         self.collector.end()
         self.print_status()
