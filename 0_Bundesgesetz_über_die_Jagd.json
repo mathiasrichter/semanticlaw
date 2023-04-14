@@ -392,28 +392,17 @@
             "type": "Litera",
             "parent": "bundesgesetzberdiejagdpeb",
             "prev": "bundesgesetzberdiejagdpej",
-            "next": "bundesgesetzberdiejagdpem",
+            "next": "bundesgesetzberdiejagdpen",
             "ord": "i",
             "title": null,
             "content": "i.  Dachs  \n\nvom 16. Januar bis 15. Juni \n"
-        },
-        {
-            "id": "bundesgesetzberdiejagdpem",
-            "line_no": 159,
-            "type": "Litera",
-            "parent": "bundesgesetzberdiejagdpeb",
-            "prev": "bundesgesetzberdiejagdpek",
-            "next": "bundesgesetzberdiejagdpen",
-            "ord": "j",
-            "title": null,
-            "content": null
         },
         {
             "id": "bundesgesetzberdiejagdpen",
             "line_no": 159,
             "type": "Litera",
             "parent": "bundesgesetzberdiejagdpeb",
-            "prev": "bundesgesetzberdiejagdpem",
+            "prev": "bundesgesetzberdiejagdpek",
             "next": "bundesgesetzberdiejagdpeo",
             "ord": "k",
             "title": null,
@@ -1770,7 +1759,7 @@
             "next": "bundesgesetzberdiejagdpim",
             "ord": 2,
             "title": null,
-            "content": null
+            "content": "2. und 3. ...36"
         },
         {
             "id": "bundesgesetzberdiejagdpim",

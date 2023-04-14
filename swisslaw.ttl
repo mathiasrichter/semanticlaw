@@ -20,6 +20,8 @@
 .
 
 :charOrdinal a rdfs:Property ;
+    rdfs:domain :TextElement ;
+    rdfs:range :TextElement ;
     sh:path :charOrdinal ;
     sh:datatype xsd:string ;
 .
@@ -100,18 +102,6 @@
         sh:path :title ;
         sh:minCount 1 ;
     ] ;
-    sh:property [
-        sh:path dct:created ;
-        sh:minCount 1 ;
-        sh:maxCount 1 ;
-        sh:datatype xsd:date ;
-    ] ;
-    sh:property [
-        sh:path dct:modified ;
-        sh:minCount 1 ;
-        sh:maxCount 1 ;
-        sh:datatype xsd:date ;
-    ] ;
 .
 
 :Bundesgesetz a rdfs:Class ;
@@ -151,7 +141,10 @@
     sh:property [
         sh:path :ord ;
         sh:minCount 1;
-        sh:datatype xsd:integer ;
+        sh:or (
+            [ sh:datatype xsd:integer ]
+            [ sh:datatype xsd:string ]
+        );
     ];
 .
 
@@ -174,7 +167,10 @@
     sh:property [
         sh:path :ord ;
         sh:minCount 1;
-        sh:datatype xsd:integer ;
+        sh:or (
+            [ sh:datatype xsd:integer ]
+            [ sh:datatype xsd:string ]
+        );
     ];
 .
 
