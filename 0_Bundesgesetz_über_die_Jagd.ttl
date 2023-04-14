@@ -1,0 +1,1583 @@
+@prefix ns1: <https://raw.githubusercontent.com/mathiasrichter/semanticlaw/main/swisslaw.ttl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/bundesgesetzberdiejagdpip> a ns1:Absatz ;
+    ns1:content """2 Der Bundesrat bestimmt das Inkrafttreten. 
+"""@de ;
+    ns1:ord 2 ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdpin> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdpio> .
+
+<http://example.org/bundesgesetzberdiejagdpdm> a ns1:Litera ;
+    ns1:content """a. 
+
+die  Artenvielfalt  und  die  Lebensräume  der  einheimischen  und  ziehenden 
+wildlebenden Säugetiere und Vögel zu erhalten; 
+"""@de ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdpdn> ;
+    ns1:ord "a" ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdpdk> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdpdk> .
+
+<http://example.org/bundesgesetzberdiejagdpdn> a ns1:Litera ;
+    ns1:content """b.  bedrohte Tierarten zu schützen; 
+"""@de ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdpdo> ;
+    ns1:ord "b" ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdpdk> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdpdm> .
+
+<http://example.org/bundesgesetzberdiejagdpdo> a ns1:Litera ;
+    ns1:content """die von wildlebenden Tieren verursachten Schäden an Wald und an landwirt-
+schaftlichen Kulturen auf ein tragbares Mass zu begrenzen; 
+"""@de ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdpdp> ;
+    ns1:ord "c" ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdpdk> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdpdn> .
+
+<http://example.org/bundesgesetzberdiejagdpdp> a ns1:Litera ;
+    ns1:content """eine angemessene Nutzung der Wildbestände durch die Jagd zu gewährleis-
+ten. 
+"""@de ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdpdq> ;
+    ns1:ord "d" ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdpdk> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdpdo> .
+
+<http://example.org/bundesgesetzberdiejagdpdq> a ns1:Absatz ;
+    ns1:content """2 Es stellt Grundsätze auf, nach denen die Kantone die Jagd zu regeln haben. 
+"""@de ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdpdr> ;
+    ns1:ord 2 ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdpdj> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdpdp> .
+
+<http://example.org/bundesgesetzberdiejagdpds> a ns1:Litera ;
+    ns1:content """a.  Vögel; 
+"""@de ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdpdt> ;
+    ns1:ord "a" ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdpdr> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdpdr> .
+
+<http://example.org/bundesgesetzberdiejagdpdt> a ns1:Litera ;
+    ns1:content """b.  Raubtiere; 
+"""@de ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdpdu> ;
+    ns1:ord "b" ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdpdr> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdpds> .
+
+<http://example.org/bundesgesetzberdiejagdpdu> a ns1:Litera ;
+    ns1:content """c.  Paarhufer; 
+"""@de ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdpdv> ;
+    ns1:ord "c" ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdpdr> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdpdt> .
+
+<http://example.org/bundesgesetzberdiejagdpdv> a ns1:Litera ;
+    ns1:content """d.  Hasenartige; 
+"""@de ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdpdw> ;
+    ns1:ord "d" ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdpdr> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdpdu> .
+
+<http://example.org/bundesgesetzberdiejagdpdw> a ns1:Litera ;
+    ns1:content """e.  Biber, Murmeltier und Eichhörnchen. 
+"""@de ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdpdx> ;
+    ns1:ord "e" ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdpdr> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdpdv> .
+
+<http://example.org/bundesgesetzberdiejagdpdz> a ns1:Absatz ;
+    ns1:content """1 Die  Kantone  regeln  und  planen  die  Jagd.  Sie  berücksichtigen  dabei  die  örtlichen 
+Verhältnisse  sowie  die  Anliegen  der  Landwirtschaft  und  des  Naturschutzes.  Die 
+nachhaltige  Bewirtschaftung  der  Wälder  und  die  natürliche  Verjüngung  mit  stand-
+ortgemässen Baumarten sollen sichergestellt sein. 
+"""@de ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdpe2> ;
+    ns1:ord 1 ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdpdy> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdpdy> .
+
+<http://example.org/bundesgesetzberdiejagdpe2> a ns1:Absatz ;
+    ns1:content """2 Sie  bestimmen  die  Voraussetzungen  für  die  Jagdberechtigung,  legen  das  Jagdsys-
+tem und das Jagdgebiet fest und sorgen für eine wirkungsvolle Aufsicht. 
+"""@de ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdpe3> ;
+    ns1:ord 2 ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdpdy> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdpdz> .
+
+<http://example.org/bundesgesetzberdiejagdpe3> a ns1:Absatz ;
+    ns1:content """3 Sie führen nach den Vorschriften des Bundesrates eine Statistik über den Abschuss 
+und den Bestand der wichtigsten Arten. 
+"""@de ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdpe4> ;
+    ns1:ord 3 ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdpdy> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdpe2> .
+
+<http://example.org/bundesgesetzberdiejagdpe4> a ns1:Absatz ;
+    ns1:content """4 Der Bundesrat bestimmt die für die Jagd verbotenen Hilfsmittel. Er lässt eine eid-
+genössische Jagdstatistik erstellen. 
+"""@de ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdpe5> ;
+    ns1:ord 4 ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdpdy> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdpe3> .
+
+<http://example.org/bundesgesetzberdiejagdpe6> a ns1:Absatz ;
+    ns1:content """1 Wer jagen will, braucht eine kantonale Jagdberechtigung. 
+"""@de ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdpe7> ;
+    ns1:ord 1 ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdpe5> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdpe5> .
+
+<http://example.org/bundesgesetzberdiejagdpe7> a ns1:Absatz ;
+    ns1:content """2 Die Jagdberechtigung wird Bewerbern erteilt, die in einer vom Kanton festgelegten 
+Prüfung nachweisen, dass sie über die erforderlichen Kenntnisse verfügen. 
+"""@de ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdpe8> ;
+    ns1:ord 2 ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdpe5> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdpe6> .
+
+<http://example.org/bundesgesetzberdiejagdpe8> a ns1:Absatz ;
+    ns1:content """3 Die Kantone können Personen, die sich auf die Jagdprüfung vorbereiten, und Jagd-
+gästen eine auf einzelne Tage beschränkte Jagdberechtigung erteilen. 
+"""@de ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdpe9> ;
+    ns1:ord 3 ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdpe5> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdpe7> .
+
+<http://example.org/bundesgesetzberdiejagdpec> a ns1:Litera ;
+    ns1:content """a.  Rothirsch  
+
+vom 1. Februar bis 31. Juli 
+"""@de ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdped> ;
+    ns1:ord "a" ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdpeb> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdpeb> .
+
+<http://example.org/bundesgesetzberdiejagdped> a ns1:Litera ;
+    ns1:content """b.  Wildschwein  
+
+vom 1. Februar bis 30. Juni 
+"""@de ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdpee> ;
+    ns1:ord "b" ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdpeb> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdpec> .
+
+<http://example.org/bundesgesetzberdiejagdpee> a ns1:Litera ;
+    ns1:content """c.  Damhirsch, Sikahirsch und Mufflon 
+
+vom 1. Februar bis 31. Juli 
+"""@de ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdpef> ;
+    ns1:ord "c" ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdpeb> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdped> .
+
+<http://example.org/bundesgesetzberdiejagdpef> a ns1:Litera ;
+    ns1:content """d.  Reh  
+
+vom 1. Februar bis 30. April 
+"""@de ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdpeg> ;
+    ns1:ord "d" ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdpeb> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdpee> .
+
+<http://example.org/bundesgesetzberdiejagdpeg> a ns1:Litera ;
+    ns1:content """e.  Gämse  
+
+vom 1. Januar bis 31. Juli 
+"""@de ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdpeh> ;
+    ns1:ord "e" ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdpeb> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdpef> .
+
+<http://example.org/bundesgesetzberdiejagdpeh> a ns1:Litera ;
+    ns1:content """f. 
+
+Feldhase, Schneehase und Wildkaninchen 
+vom 1. Januar bis 30. September 
+"""@de ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdpei> ;
+    ns1:ord "f" ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdpeb> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdpeg> .
+
+<http://example.org/bundesgesetzberdiejagdpei> a ns1:Litera ;
+    ns1:content """g.  Murmeltier  
+
+vom 16. Oktober bis 31. August 
+"""@de ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdpej> ;
+    ns1:ord "g" ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdpeb> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdpeh> .
+
+<http://example.org/bundesgesetzberdiejagdpej> a ns1:Litera ;
+    ns1:content """h.  Fuchs  
+
+vom 1. März bis 15. Juni 
+"""@de ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdpek> ;
+    ns1:ord "h" ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdpeb> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdpei> .
+
+<http://example.org/bundesgesetzberdiejagdpek> a ns1:Litera ;
+    ns1:content """i.  Dachs  
+
+vom 16. Januar bis 15. Juni 
+"""@de ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdpen> ;
+    ns1:ord "i" ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdpeb> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdpej> .
+
+<http://example.org/bundesgesetzberdiejagdpen> a ns1:Litera ;
+    ns1:content """k.  Edelmarder und Steinmarder   
+
+vom 16. Februar bis 31. August 
+"""@de ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdpeo> ;
+    ns1:ord "k" ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdpeb> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdpek> .
+
+<http://example.org/bundesgesetzberdiejagdpeo> a ns1:Litera ;
+    ns1:content """l.  Birkhahn, Schneehuhn und Rebhuhn 
+vom 1. Dezember bis 15. Oktober 
+"""@de ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdpep> ;
+    ns1:ord "l" ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdpeb> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdpen> .
+
+<http://example.org/bundesgesetzberdiejagdpep> a ns1:Litera ;
+    ns1:content """m.  Ringeltaube, Türkentaube, Kolkrabe und Nebelkrähe 
+
+vom 16. Februar bis 31. Juli 
+"""@de ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdpeq> ;
+    ns1:ord "m" ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdpeb> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdpeo> .
+
+<http://example.org/bundesgesetzberdiejagdpeq> a ns1:Litera ;
+    ns1:content """n.  Fasan  
+
+vom 1. Februar bis 31. August 
+"""@de ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdper> ;
+    ns1:ord "n" ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdpeb> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdpep> .
+
+<http://example.org/bundesgesetzberdiejagdper> a ns1:Litera ;
+    ns1:content """o.  Haubentaucher, Blässhuhn, Kormoran und Wildenten 
+
+vom 1. Februar bis 31. August; 
+"""@de ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdpes> ;
+    ns1:ord "o" ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdpeb> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdpeq> .
+
+<http://example.org/bundesgesetzberdiejagdpes> a ns1:Litera ;
+    ns1:content """p.  Waldschnepfe  
+
+vom 15. Dezember bis 15. September 
+"""@de ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdpet> ;
+    ns1:ord "p" ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdpeb> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdper> .
+
+<http://example.org/bundesgesetzberdiejagdpet> a ns1:Absatz ;
+    ns1:content """2 Bei den Wildenten sind die folgenden Arten geschützt: Wildgänse, Halbgänsearten 
+(Brandgans  und  Rostgans),  Säger  und  Schwäne  sowie  Marmelenten,  Scheckenten, 
+Kragenenten, Ruderenten, Spatelenten und Kolbenenten. 
+"""@de ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdpeu> ;
+    ns1:ord 2 ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdpe9> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdpes> .
+
+<http://example.org/bundesgesetzberdiejagdpev> a ns1:Litera ;
+    ns1:content """a.  Marderhund, Waschbär und verwilderte Hauskatze; 
+"""@de ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdpew> ;
+    ns1:ord "a" ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdpeu> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdpeu> .
+
+<http://example.org/bundesgesetzberdiejagdpew> a ns1:Litera ;
+    ns1:content """b.  Rabenkrähe, Elster, Eichelhäher und verwilderte Haustaube. 
+"""@de ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdpex> ;
+    ns1:ord "b" ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdpeu> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdpev> .
+
+<http://example.org/bundesgesetzberdiejagdpex> a ns1:Absatz ;
+    ns1:content """4 Die Kantone können die Schonzeiten verlängern oder die Liste der jagdbaren Arten 
+einschränken.  Sie  sind  dazu  verpflichtet,  wenn  der  Schutz  örtlich  bedrohter  Arten 
+dies erfordert. 
+"""@de ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdpey> ;
+    ns1:ord 4 ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdpe9> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdpew> .
+
+<http://example.org/bundesgesetzberdiejagdpey> a ns1:Absatz ;
+    ns1:content """5 Sie  können  mit  vorheriger  Zustimmung  des  Eidgenössischen  Departements  für 
+Umwelt,  Verkehr,  Energie  und  Kommunikation4  (Departement)  die  Schonzeiten 
+vorübergehend  verkürzen,  um  zu  grosse  Bestände  zu  vermindern  oder  die  Arten-
+vielfalt zu erhalten. 
+"""@de ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdpez> ;
+    ns1:ord 5 ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdpe9> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdpex> .
+
+<http://example.org/bundesgesetzberdiejagdpez> a ns1:Absatz ;
+    ns1:content """6 Der  Bundesrat  kann  nach  Anhören  der  Kantone  die  Liste  der  jagdbaren  Arten 
+gesamtschweizerisch  beschränken,  wenn  es  zur  Erhaltung  bedrohter  Arten  notwen-
+dig  ist,  oder  unter  Angabe  der  entsprechenden  Schonzeiten  erweitern,  sofern  die 
+Bestände geschützter Arten die Jagd wieder zulassen. 
+"""@de ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdpf2> ;
+    ns1:ord 6 ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdpe9> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdpey> .
+
+<http://example.org/bundesgesetzberdiejagdpf3> a ns1:Absatz ;
+    ns1:content """1 Die Kantone können jagdbare Tiere aussetzen, sofern geeigneter Lebensraum vor-
+handen und genügende Schonung gewährleistet ist. 
+"""@de ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdpf4> ;
+    ns1:ord 1 ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdpf2> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdpf2> .
+
+<http://example.org/bundesgesetzberdiejagdpf4> a ns1:Absatz ;
+    ns1:content """2 Tiere, die grossen Schaden anrichten oder die einheimische Artenvielfalt bedrohen, 
+dürfen nicht ausgesetzt werden. Der Bundesrat bezeichnet die entsprechenden Tier-
+arten. 
+"""@de ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdpf5> ;
+    ns1:ord 2 ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdpf2> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdpf3> .
+
+<http://example.org/bundesgesetzberdiejagdpf7> a ns1:Absatz ;
+    ns1:content """1 Alle Tiere nach Artikel 2, die nicht zu einer jagdbaren Art gehören, sind geschützt 
+(geschützte Arten). 
+"""@de ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdpf8> ;
+    ns1:ord 1 ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdpf6> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdpf6> .
+
+<http://example.org/bundesgesetzberdiejagdpf8> a ns1:Absatz ;
+    ns1:content """2 Die  Kantone  können  mit  vorheriger  Zustimmung  des  Bundesamts  für  Umwelt5 
+(Bundesamt) den Abschuss von geschützten Tieren vorsehen, soweit der Schutz der 
+Lebensräume  oder  die  Erhaltung  der  Artenvielfalt  es  verlangt.  Der  Bundesrat  be-
+zeichnet die unter diese Bestimmung fallenden Arten. 
+"""@de ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdpf9> ;
+    ns1:ord 2 ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdpf6> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdpf7> .
+
+<http://example.org/bundesgesetzberdiejagdpf9> a ns1:Absatz ;
+    ns1:content """3 Steinböcke können zur Regulierung der Bestände zwischen dem 1. September und 
+dem 30. November gejagt werden. Die Kantone unterbreiten jährlich dem Departe-
+ment  eine  Abschussplanung  zur  Genehmigung.  Der  Bundesrat  erlässt  die  entspre-
+chenden Vorschriften. 
+"""@de ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdpfa> ;
+    ns1:ord 3 ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdpf6> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdpf8> .
+
+<http://example.org/bundesgesetzberdiejagdpfa> a ns1:Absatz ;
+    ns1:content """4 Die  Kantone  sorgen  für  einen  ausreichenden  Schutz  der  wildlebenden  Säugetiere 
+und Vögel vor Störung. 
+"""@de ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdpfb> ;
+    ns1:ord 4 ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdpf6> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdpf9> .
+
+<http://example.org/bundesgesetzberdiejagdpfb> a ns1:Absatz ;
+    ns1:content """5 Sie regeln insbesondere den Schutz der Muttertiere und der Jungtiere während der 
+Jagd sowie der Altvögel während der Brutzeit. 
+"""@de ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdpfc> ;
+    ns1:ord 5 ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdpf6> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdpfa> .
+
+<http://example.org/bundesgesetzberdiejagdpfc> a ns1:Absatz ;
+    ns1:content """6 Bei  der  Planung  und  Ausführung  von  Bauten  und  Anlagen,  die  den  Schutz  der 
+wildlebenden Säugetiere und Vögel beeinträchtigen können, hört der Bund die Kan-
+tone an. Für Vorhaben, die Schutzgebiete von internationaler und nationaler Bedeu-
+tung beeinträchtigen, ist die Stellungnahme des Bundesamtes einzuholen. 
+"""@de ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdpfd> ;
+    ns1:ord 6 ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdpf6> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdpfb> .
+
+<http://example.org/bundesgesetzberdiejagdpfd> a ns1:Artikel ;
+    ns1:content """Wildhüter,  Jagdaufseher  und  Revierpächter  sind  berechtigt,  verletzte  und  kranke 
+Tiere auch ausserhalb der Jagdzeit zu erlegen. Solche Abschüsse sind der kantonalen 
+Jagdbehörde unverzüglich zu melden. 
+"""@de ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdpfe> ;
+    ns1:ord 8 ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdpf5> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdpfc> ;
+    ns1:title """Art. 8 
+
+Abschuss kranker und verletzter Tiere 
+"""@de .
+
+<http://example.org/bundesgesetzberdiejagdpfg> a ns1:Litera ;
+    ns1:content """a.  Tiere geschützter Arten sowie Teile davon oder daraus hergestellte Erzeug-
+
+nisse ein-, durch- oder ausführen will; 
+"""@de ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdpfh> ;
+    ns1:ord "a" ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdpff> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdpff> .
+
+<http://example.org/bundesgesetzberdiejagdpfh> a ns1:Litera ;
+    ns1:content """b.  Tiere geschützter Arten aussetzen will; 
+"""@de ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdpfi> ;
+    ns1:ord "b" ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdpff> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdpfg> .
+
+<http://example.org/bundesgesetzberdiejagdpfi> a ns1:Litera ;
+    ns1:content """jagdbare Tiere einführen will, um sie auszusetzen; 
+"""@de ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdpfj> ;
+    ns1:ord "c" ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdpff> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdpfh> .
+
+<http://example.org/bundesgesetzberdiejagdpfj> a ns1:Litera ;
+    ns1:content """ausnahmsweise Hilfsmittel, die für die Jagd verboten sind, verwenden will. 
+"""@de ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdpfk> ;
+    ns1:ord "d" ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdpff> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdpfi> .
+
+<http://example.org/bundesgesetzberdiejagdpfk> a ns1:Absatz ;
+    ns1:content """2 Der Bundesrat ordnet die Zuständigkeit und das Verfahren. 
+"""@de ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdpfo> ;
+    ns1:ord 2 ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdpfe> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdpfj> .
+
+<http://example.org/bundesgesetzberdiejagdpfp> a ns1:Absatz ;
+    ns1:content """1 Wer geschützte Tiere halten will, braucht eine kantonale Bewilligung. 
+"""@de ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdpfq> ;
+    ns1:ord 1 ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdpfo> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdpfo> .
+
+<http://example.org/bundesgesetzberdiejagdpfq> a ns1:Absatz ;
+    ns1:content """2 Der  Bundesrat  legt  die  Bedingungen  fest,  unter  denen  geschützte  Tiere  gehalten 
+werden dürfen. 
+"""@de ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdpfr> ;
+    ns1:ord 2 ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdpfo> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdpfp> .
+
+<http://example.org/bundesgesetzberdiejagdpfs> a ns1:Absatz ;
+    ns1:content """1 Der Bundesrat scheidet nach Anhören der Kantone Wasser- und Zugvogelreservate 
+von internationaler Bedeutung aus. 
+"""@de ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdpft> ;
+    ns1:ord 1 ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdpfr> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdpfr> .
+
+<http://example.org/bundesgesetzberdiejagdpft> a ns1:Absatz ;
+    ns1:content """2 Er  scheidet  im  Einvernehmen  mit  den  Kantonen  eidgenössische  Jagdbanngebiete 
+sowie Wasser- und Zugvogelreservate von nationaler Bedeutung aus. 
+"""@de ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdpfu> ;
+    ns1:ord 2 ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdpfr> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdpfs> .
+
+<http://example.org/bundesgesetzberdiejagdpfu> a ns1:Absatz ;
+    ns1:content """3 Die eidgenössischen Jagdbanngebiete dürfen nur im Einvernehmen mit dem Bun-
+desrat aufgehoben oder durch gleichwertige ersetzt werden. 
+"""@de ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdpfv> ;
+    ns1:ord 3 ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdpfr> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdpft> .
+
+<http://example.org/bundesgesetzberdiejagdpfv> a ns1:Absatz ;
+    ns1:content """4 Die Kantone können weitere Jagdbanngebiete und Vogelreservate ausscheiden. 
+"""@de ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdpfw> ;
+    ns1:ord 4 ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdpfr> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdpfu> .
+
+<http://example.org/bundesgesetzberdiejagdpfw> a ns1:Absatz ;
+    ns1:content """5 In den Jagdbanngebieten und Vogelreservaten ist die Jagd verboten. Die kantonalen 
+Vollzugsorgane können jedoch den Abschuss von jagdbaren Tieren zulassen, wenn 
+es  für  den  Schutz  der  Lebensräume,  für  die  Erhaltung  der  Artenvielfalt,  zur  Hege 
+oder zur Verhütung von übermässigen Wildschäden notwendig ist. 
+"""@de ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdpfx> ;
+    ns1:ord 5 ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdpfr> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdpfv> .
+
+<http://example.org/bundesgesetzberdiejagdpfx> a ns1:Absatz ;
+    ns1:content """6 Zu den Wasser- und Zugvogelreservaten von internationaler und nationaler Bedeu-
+tung  und  den  eidgenössischen  Jagdbanngebieten  erlässt  der  Bundesrat  die  Schutz-
+bestimmungen. Der Bund gewährt den Kantonen auf der Grundlage von Programm-
+vereinbarungen globale Abgeltungen an die Kosten für die Aufsicht dieser Reservate 
+und Gebiete.6 
+"""@de ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdpfy> ;
+    ns1:ord 6 ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdpfr> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdpfw> .
+
+<http://example.org/bundesgesetzberdiejagdpg3> a ns1:Absatz ;
+    ns1:content """1 Die Kantone treffen Massnahmen zur Verhütung von Wildschaden. 
+"""@de ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdpg4> ;
+    ns1:ord 1 ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdpfz> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdpfz> .
+
+<http://example.org/bundesgesetzberdiejagdpg4> a ns1:Absatz ;
+    ns1:content """2 Sie können jederzeit Massnahmen gegen einzelne  geschützte oder jagdbare Tiere, 
+die  erheblichen  Schaden  anrichten,  anordnen  oder  erlauben.  Mit  der  Durchführung 
+dieser  Massnahmen  dürfen  sie  nur  Jagdberechtigte  und  Aufsichtsorgane  beauftra-
+gen.7 
+
+2bis Der Bundesrat kann  geschützte Tierarten bezeichnen,  bei  denen das Bundesamt 
+die Massnahmen nach Absatz 2 anordnet.8 
+"""@de ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdpg5> ;
+    ns1:ord 2 ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdpfz> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdpg3> .
+
+<http://example.org/bundesgesetzberdiejagdpg5> a ns1:Absatz ;
+    ns1:content """3 Die Kantone bestimmen, welche Selbsthilfemassnahmen gegen jagdbare Tiere zum 
+Schutze von Haustieren, Liegenschaften und landwirtschaftlichen Kulturen zulässig 
+sind.9 Der Bundesrat bezeichnet die geschützten Tierarten, gegen die solche Selbst-
+hilfemassnahmen ergriffen werden dürfen. 
+"""@de ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdpg6> ;
+    ns1:ord 3 ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdpfz> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdpg4> .
+
+<http://example.org/bundesgesetzberdiejagdpg6> a ns1:Absatz ;
+    ns1:content """4 Weist  eine  geschützte  Tierart  einen  zu  hohen  Bestand  auf  und  entsteht  dadurch 
+grosser Schaden oder eine erhebliche  Gefährdung, so können die Kantone mit vor-
+heriger Zustimmung des Departements Massnahmen zur Verringerung des Bestandes 
+treffen. 
+"""@de ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdpg7> ;
+    ns1:ord 4 ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdpfz> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdpg5> .
+
+<http://example.org/bundesgesetzberdiejagdpg7> a ns1:Absatz ;
+    ns1:content """5 Der Bund fördert und koordiniert die Massnahmen der Kantone zur Verhütung von 
+Wildschaden,  der  durch  Grossraubtiere  an  Nutztieren  verursacht  wird.10  Er  kann 
+gegen  Entschädigung  öffentlich-rechtliche  Körperschaften  oder  Private  mit  dem 
+Vollzug dieser Aufgaben beauftragen.11 
+"""@de ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdpg8> ;
+    ns1:ord 5 ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdpfz> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdpg6> .
+
+<http://example.org/bundesgesetzberdiejagdpg9> a ns1:Absatz ;
+    ns1:content """1 Der Schaden, den jagdbare Tiere an Wald, landwirtschaftlichen Kulturen und Nutz-
+tieren  anrichten,  wird  angemessen  entschädigt.  Ausgenommen  sind  Schäden  durch 
+Tiere,  gegen  welche  nach  Artikel  12  Absatz  3  Selbsthilfemassnahmen  ergriffen 
+werden dürfen. 
+"""@de ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdpga> ;
+    ns1:ord 1 ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdpg8> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdpg8> .
+
+<http://example.org/bundesgesetzberdiejagdpga> a ns1:Absatz ;
+    ns1:content """2 Die Kantone regeln die Entschädigungspflicht. Entschädigungen sind nur insoweit 
+zu leisten, als es sich nicht um Bagatellschäden handelt und die zumutbaren Mass-
+nahmen zur Verhütung von Wildschaden getroffen worden sind. Aufwendungen für 
+Verhütungsmassnahmen  können  bei  der  Entschädigung  von  Wildschaden  berück-
+sichtigt werden. 
+"""@de ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdpgb> ;
+    ns1:ord 2 ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdpg8> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdpg9> .
+
+<http://example.org/bundesgesetzberdiejagdpgb> a ns1:Absatz ;
+    ns1:content """3 Der Bund gewährt den Kantonen auf der Grundlage von Programmvereinbarungen 
+globale Abgeltungen an die Kosten für die Entschädigung von Wildschaden, der auf 
+ein Reservat oder Gebiet nach Artikel 11 Absatz 6 zurückzuführen ist.12 
+"""@de ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdpgc> ;
+    ns1:ord 3 ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdpg8> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdpga> .
+
+<http://example.org/bundesgesetzberdiejagdpgc> a ns1:Absatz ;
+    ns1:content """4 Bund und Kantone beteiligen sich an der Vergütung von Schaden, der durch Tiere 
+bestimmter geschützter Arten verursacht wird. Der Bundesrat bestimmt nach Anhö-
+ren der Kantone diese geschützten Tierarten und die Voraussetzungen der Entschä-
+digungspflicht. 
+"""@de ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdpgd> ;
+    ns1:ord 4 ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdpg8> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdpgb> .
+
+<http://example.org/bundesgesetzberdiejagdpgf> a ns1:Absatz ;
+    ns1:content """1 Die  Kantone  sorgen  dafür,  dass  die  Bevölkerung  über  die  Lebensweise  der  wild-
+lebenden Tiere, ihre Bedürfnisse und ihren Schutz ausreichend informiert wird. 
+"""@de ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdpgg> ;
+    ns1:ord 1 ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdpge> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdpge> .
+
+<http://example.org/bundesgesetzberdiejagdpgg> a ns1:Absatz ;
+    ns1:content """2 Sie regeln die Aus- und Weiterbildung der Wildschutzorgane und der Jäger. Für die 
+zusätzliche Weiterbildung der Wildschutzorgane der eidgenössischen Schutzgebiete 
+führt der Bund entsprechende Kurse durch.13 
+"""@de ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdpgh> ;
+    ns1:ord 2 ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdpge> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdpgf> .
+
+<http://example.org/bundesgesetzberdiejagdpgh> a ns1:Absatz ;
+    ns1:content """3 Der  Bund  fördert  die  Erforschung  der  wildlebenden  Tiere,  ihrer  Krankheiten  und 
+ihres  Lebensraumes.  Zu  diesem  Zweck  kann  das  Bundesamt  für  geschützte  Tiere 
+Ausnahmen von den Schutzbestimmungen dieses Gesetzes bewilligen. Für Ausnah-
+mebewilligungen, die jagdbare Tiere betreffen, sind die Kantone zuständig. 
+"""@de ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdpgi> ;
+    ns1:ord 3 ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdpge> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdpgg> .
+
+<http://example.org/bundesgesetzberdiejagdpgi> a ns1:Absatz ;
+    ns1:content """4 Der  Bund  führt  die  Schweizerische  Dokumentationsstelle  für  Wildforschung.  Er 
+fördert  die  Information  der  Öffentlichkeit  und  kann  Forschungsstätten  und  anderen 
+Einrichtungen von gesamtschweizerischer Bedeutung, welche der Bildung und For-
+schung dienen, Beiträge gewähren. 
+"""@de ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdpgj> ;
+    ns1:ord 4 ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdpge> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdpgh> .
+
+<http://example.org/bundesgesetzberdiejagdpgj> a ns1:Absatz ;
+    ns1:content """5 Der Bundesrat erlässt Vorschriften über das Markieren von wildlebenden Säugetie-
+ren und Vögeln. 
+"""@de ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdpgk> ;
+    ns1:ord 5 ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdpge> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdpgi> .
+
+<http://example.org/bundesgesetzberdiejagdpgn> a ns1:Absatz ;
+    ns1:content """1 Wer durch die Jagdausübung Schaden verursacht, haftet dafür. 
+"""@de ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdpgo> ;
+    ns1:ord 1 ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdpgm> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdpgm> .
+
+<http://example.org/bundesgesetzberdiejagdpgo> a ns1:Absatz ;
+    ns1:content """2 Im Übrigen gelten die Bestimmungen des Obligationenrechts14 über die unerlaub-
+ten Handlungen. 
+"""@de ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdpgp> ;
+    ns1:ord 2 ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdpgm> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdpgn> .
+
+<http://example.org/bundesgesetzberdiejagdpgq> a ns1:Absatz ;
+    ns1:content """1 Alle Jagdberechtigten müssen für ihre Haftpflicht eine Versicherung abschliessen. 
+Der Bundesrat setzt die minimale Deckungssumme fest. 
+"""@de ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdpgr> ;
+    ns1:ord 1 ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdpgp> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdpgp> .
+
+<http://example.org/bundesgesetzberdiejagdpgr> a ns1:Absatz ;
+    ns1:content """2 Der  Geschädigte  hat  bis  zur  vertraglichen  Versicherungssumme  ein  Forderungs-
+recht unmittelbar gegen den Versicherer. 
+"""@de ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdpgs> ;
+    ns1:ord 2 ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdpgp> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdpgq> .
+
+<http://example.org/bundesgesetzberdiejagdpgs> a ns1:Absatz ;
+    ns1:content """3 Einreden aus dem Versicherungsvertrag oder aus dem Bundesgesetz vom 2. April 
+190815 über den Versicherungsvertrag können dem Geschädigten nicht entgegenge-
+halten werden. 
+"""@de ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdpgt> ;
+    ns1:ord 3 ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdpgp> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdpgr> .
+
+<http://example.org/bundesgesetzberdiejagdpgt> a ns1:Absatz ;
+    ns1:content """4 Der Versicherer hat ein Rückgriffsrecht gegen den Versicherungsnehmer oder den 
+Versicherten, soweit er nach dem Versicherungsvertrag oder dem Bundesgesetz über 
+den Versicherungsvertrag seine Leistungen verweigern oder kürzen könnte. 
+"""@de ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdpgu> ;
+    ns1:ord 4 ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdpgp> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdpgs> .
+
+<http://example.org/bundesgesetzberdiejagdpgx> a ns1:Litera ;
+    ns1:content """a.  Tiere jagdbarer und geschützter Arten jagt oder tötet sowie Tiere geschützter 
+
+Arten einfängt, gefangen hält oder sich aneignet; 
+"""@de ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdpgy> ;
+    ns1:ord "a" ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdpgw> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdpgw> .
+
+<http://example.org/bundesgesetzberdiejagdpgy> a ns1:Litera ;
+    ns1:content """b.  Eier  oder  Jungvögel  geschützter  Arten  ausnimmt  oder  das  Brutgeschäft  der 
+
+Vögel stört; 
+"""@de ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdpgz> ;
+    ns1:ord "b" ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdpgw> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdpgx> .
+
+<http://example.org/bundesgesetzberdiejagdpgz> a ns1:Litera ;
+    ns1:content """c. 
+
+lebende oder tote geschützte Tiere, Teile davon sowie daraus hergestellte Er-
+zeugnisse und Eier ein-, durch- oder ausführt, feilbietet oder veräussert; 
+"""@de ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdph2> ;
+    ns1:ord "c" ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdpgw> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdpgy> .
+
+<http://example.org/bundesgesetzberdiejagdph2> a ns1:Litera ;
+    ns1:content """d. 
+
+lebende  oder  tote  Tiere  oder  daraus  hergestellte  Erzeugnisse,  von  denen  er 
+weiss  oder  annehmen  muss,  dass  sie  durch  eine  strafbare  Handlung  erlangt 
+worden  sind,  erwirbt,  sich  schenken  lässt,  zu  Pfand  oder  in  Gewahrsam 
+nimmt, verheimlicht, absetzt oder absetzen hilft; 
+"""@de ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdph3> ;
+    ns1:ord "d" ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdpgw> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdpgz> .
+
+<http://example.org/bundesgesetzberdiejagdph3> a ns1:Litera ;
+    ns1:content """e.  Schutzgebiete ohne ausreichenden Grund mit einer Schusswaffe betritt; 
+"""@de ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdph4> ;
+    ns1:ord "e" ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdpgw> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdph2> .
+
+<http://example.org/bundesgesetzberdiejagdph4> a ns1:Litera ;
+    ns1:content """f.  Tiere aus Schutzgebieten hinaustreibt oder herauslockt; 
+"""@de ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdph5> ;
+    ns1:ord "f" ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdpgw> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdph3> .
+
+<http://example.org/bundesgesetzberdiejagdph5> a ns1:Litera ;
+    ns1:content """g.  Tiere aussetzt; 
+"""@de ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdph6> ;
+    ns1:ord "g" ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdpgw> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdph4> .
+
+<http://example.org/bundesgesetzberdiejagdph6> a ns1:Litera ;
+    ns1:content """h.  Füchse,  Dachse  und  Murmeltiere  ausräuchert,  begast,  ausschwemmt  oder 
+
+anbohrt; 
+"""@de ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdph7> ;
+    ns1:ord "h" ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdpgw> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdph5> .
+
+<http://example.org/bundesgesetzberdiejagdph7> a ns1:Litera ;
+    ns1:content """i.17  für die Jagd verbotene Hilfsmittel verwendet. 
+"""@de ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdpha> ;
+    ns1:ord "i" ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdpgw> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdph6> .
+
+<http://example.org/bundesgesetzberdiejagdpha> a ns1:Absatz ;
+    ns1:content """2 Handelt der Täter fahrlässig, so ist die Strafe Busse. 
+"""@de ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdphb> ;
+    ns1:ord 2 ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdpgv> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdph7> .
+
+<http://example.org/bundesgesetzberdiejagdphd> a ns1:Litera ;
+    ns1:content """a. 
+
+jagdbare  Tiere  einfängt,  gefangen  hält,  sich  aneignet  oder  einführt,  um  sie 
+auszusetzen; 
+"""@de ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdphe> ;
+    ns1:ord "a" ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdphc> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdphc> .
+
+<http://example.org/bundesgesetzberdiejagdphe> a ns1:Litera ;
+    ns1:content """b. 
+
+Jagdgebiete ohne ausreichenden Grund mit einer Schusswaffe betritt; 
+"""@de ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdphf> ;
+    ns1:ord "b" ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdphc> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdphd> .
+
+<http://example.org/bundesgesetzberdiejagdphf> a ns1:Litera ;
+    ns1:content """c. 
+
+ausserhalb der Jagdzeit Waffen oder Fallen auf Maiensässen und Alpen auf-
+bewahrt; 
+"""@de ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdphg> ;
+    ns1:ord "c" ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdphc> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdphe> .
+
+<http://example.org/bundesgesetzberdiejagdphg> a ns1:Litera ;
+    ns1:content """d.  Hunde wildern lässt; 
+"""@de ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdphh> ;
+    ns1:ord "d" ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdphc> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdphf> .
+
+<http://example.org/bundesgesetzberdiejagdphh> a ns1:Litera ;
+    ns1:content """e.  Massnahmen zum Schutze der Tiere vor Störung missachtet; 
+"""@de ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdphi> ;
+    ns1:ord "e" ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdphc> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdphg> .
+
+<http://example.org/bundesgesetzberdiejagdphi> a ns1:Litera ;
+    ns1:content """f.  Eier oder Jungvögel jagdbarer Arten ausnimmt; 
+"""@de ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdphj> ;
+    ns1:ord "f" ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdphc> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdphh> .
+
+<http://example.org/bundesgesetzberdiejagdphj> a ns1:Litera ;
+    ns1:content """g.  Böschungen,  Feldraine  oder  Weiden  flächenhaft  abbrennt  oder  Hecken  be-
+
+seitigt; 
+"""@de ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdphk> ;
+    ns1:ord "g" ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdphc> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdphi> .
+
+<http://example.org/bundesgesetzberdiejagdphk> a ns1:Litera ;
+    ns1:content """h.  den Jagdbetrieb behindert. 
+"""@de ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdphm> ;
+    ns1:ord "h" ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdphc> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdphj> .
+
+<http://example.org/bundesgesetzberdiejagdphm> a ns1:Absatz ;
+    ns1:content """2 Versuch und Gehilfenschaft sind strafbar. 
+"""@de ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdphn> ;
+    ns1:ord 2 ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdphb> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdphk> .
+
+<http://example.org/bundesgesetzberdiejagdphn> a ns1:Absatz ;
+    ns1:content """3 Handelt der Täter in den Fällen von Absatz 1 Buchstaben a–g fahrlässig, so ist die 
+Strafe Busse. 
+"""@de ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdpho> ;
+    ns1:ord 3 ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdphb> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdphm> .
+
+<http://example.org/bundesgesetzberdiejagdpho> a ns1:Absatz ;
+    ns1:content """4 Wer während der Jagd die vorgeschriebenen Ausweise nicht auf sich trägt oder sich 
+weigert,  sie  den  zuständigen  Wildschutzorganen  vorzuzeigen,  wird  mit  Busse  be-
+straft. 
+"""@de ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdphp> ;
+    ns1:ord 4 ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdphb> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdphn> .
+
+<http://example.org/bundesgesetzberdiejagdphp> a ns1:Absatz ;
+    ns1:content """5 Die Kantone können Widerhandlungen gegen kantonales Recht als Übertretungen 
+ahnden. 
+"""@de ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdphq> ;
+    ns1:ord 5 ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdphb> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdpho> .
+
+<http://example.org/bundesgesetzberdiejagdphq> a ns1:Artikel ;
+    ns1:content """Artikel 6 des Bundesgesetzes vom 22. März 197419 über das Verwaltungsstrafrecht 
+ist anwendbar. 
+"""@de ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdphr> ;
+    ns1:ord 19 ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdpgu> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdphp> ;
+    ns1:title """Art. 19 
+
+Anwendung auf juristische Personen und Handelsgesellschaften 
+"""@de .
+
+<http://example.org/bundesgesetzberdiejagdpht> a ns1:Litera ;
+    ns1:content """a. 
+
+b. 
+
+vorsätzlich oder fahrlässig eine Person auf der Jagd tötet oder erheblich ver-
+letzt; 
+"""@de ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdphu> ;
+    ns1:ord "a" ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdphs> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdphs> .
+
+<http://example.org/bundesgesetzberdiejagdphu> a ns1:Litera ;
+    ns1:content """eine  Widerhandlung  nach  Artikel  17  als  Täter,  Anstifter  oder  Gehilfe  vor-
+sätzlich begangen oder versucht hat. 
+"""@de ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdphv> ;
+    ns1:ord "b" ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdphs> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdpht> .
+
+<http://example.org/bundesgesetzberdiejagdphv> a ns1:Absatz ;
+    ns1:content """2 Der Entzug gilt für die ganze Schweiz. 
+"""@de ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdphw> ;
+    ns1:ord 2 ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdphr> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdphu> .
+
+<http://example.org/bundesgesetzberdiejagdphw> a ns1:Absatz ;
+    ns1:content """3 Die Kantone können weitere Entzugsgründe sowie Verweigerungsgründe festlegen. 
+Die  gestützt  darauf  erlassenen  administrativen  Verfügungen  gelten  nur  für  den 
+betreffenden Kanton. 
+"""@de ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdphx> ;
+    ns1:ord 3 ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdphr> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdphv> .
+
+<http://example.org/bundesgesetzberdiejagdphz> a ns1:Absatz ;
+    ns1:content """1 Die Verfolgung und Beurteilung von Widerhandlungen ist Sache der Kantone. 
+"""@de ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdpi2> ;
+    ns1:ord 1 ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdphy> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdphy> .
+
+<http://example.org/bundesgesetzberdiejagdpi2> a ns1:Absatz ;
+    ns1:content """2 Das Bundesamt für Lebensmittelsicherheit und Veterinärwesen verfolgt und beur-
+teilt  Widerhandlungen  bei  der  Ein-,  Durch-  und  Ausfuhr.  Liegt  gleichzeitig  eine 
+Widerhandlung gegen das Zollgesetz vom 18. März 200520 oder das Mehrwertsteu-
+ergesetz vom 12. Juni 200921 vor, so verfolgt und beurteilt das Bundesamt für Zoll 
+und Grenzsicherheit die Widerhandlungen.22 
+"""@de ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdpi3> ;
+    ns1:ord 2 ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdphy> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdphz> .
+
+<http://example.org/bundesgesetzberdiejagdpi3> a ns1:Absatz ;
+    ns1:content """3 Stellt  eine  Widerhandlung  gleichzeitig  eine  nach  Absatz  2  sowie  eine  durch  die 
+gleiche Bundesbehörde zu verfolgende Widerhandlung gegen das Bundesgesetz vom 
+16.  März  201223  über  den  Verkehr  mit  Tieren  und  Pflanzen  geschützter  Arten,  das 
+Tierschutzgesetz vom 16. Dezember 200524, das Zollgesetz vom 18. März 2005, das 
+Mehrwertsteuergesetz  vom  12.  Juni  2009,  das  Lebensmittelgesetz  vom  20.  Juni 
+201425  oder  das  Tierseuchengesetz  vom  1.  Juli  196626  dar,  so  wird  die  für  die 
+schwerste  Widerhandlung  angedrohte  Strafe  angewendet;  diese  kann  angemessen 
+erhöht werden.27 
+"""@de ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdpi4> ;
+    ns1:ord 3 ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdphy> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdpi2> .
+
+<http://example.org/bundesgesetzberdiejagdpi5> a ns1:Absatz ;
+    ns1:content """1 Jeder vom Richter verfügte Entzug der Jagdberechtigung ist dem Bundesamt mit-
+zuteilen. 
+"""@de ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdpi6> ;
+    ns1:ord 1 ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdpi4> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdpi4> .
+
+<http://example.org/bundesgesetzberdiejagdpi6> a ns1:Absatz ;
+    ns1:content """2 Das  Bundesamt  stellt  den  Kantonen  eine  Liste  der  Personen  zu,  denen  die  Jagd-
+berechtigung entzogen wurde; diese Liste dient den Kantonen dazu, den Entzug der 
+Jagdberechtigung auf ihrem Gebiet zu gewährleisten. 
+"""@de ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdpi7> ;
+    ns1:ord 2 ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdpi4> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdpi5> .
+
+<http://example.org/bundesgesetzberdiejagdpi7> a ns1:Absatz ;
+    ns1:content """3 Das  Bundesamt  darf  diese  Daten  in  einer  elektronischen  Datensammlung  auf-
+bewahren.  Nach  Ablauf  des  Entzugs  der  Jagdberechtigung  löscht  es  die  elektroni-
+schen Einträge und vernichtet die entsprechenden kantonalen Verfügungen. Es darf 
+letztere  in  anonymisierter  Form  zu  wissenschaftlichen  oder  statistischen  Zwecken 
+aufbewahren. 
+"""@de ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdpi8> ;
+    ns1:ord 3 ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdpi4> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdpi6> .
+
+<http://example.org/bundesgesetzberdiejagdpi8> a ns1:Artikel ;
+    ns1:content """In  Pachtgebieten  ist  der  Pächter,  in  den  übrigen  Gebieten  der  Kanton  oder  die  Ge-
+meinde berechtigt, für den durch ein Jagdvergehen oder eine Übertretung entstande-
+nen Schaden Ersatz zu verlangen. Im Übrigen gelten die Bestimmungen des Obliga-
+tionenrechts29. 
+"""@de ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdpi9> ;
+    ns1:ord 23 ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdphx> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdpi7> ;
+    ns1:title """Art. 23 
+
+Schadenersatz 
+"""@de .
+
+<http://example.org/bundesgesetzberdiejagdpia> a ns1:Artikel ;
+    ns1:content """Der Bundesrat erlässt die Ausführungsbestimmungen. 
+"""@de ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdpib> ;
+    ns1:ord 24 ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdpi9> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdpi9> ;
+    ns1:title """Art. 24 
+
+Vollzug durch den Bund31 
+"""@de .
+
+<http://example.org/bundesgesetzberdiejagdpic> a ns1:Absatz ;
+    ns1:content """1 Die Kantone vollziehen dieses Gesetz unter der Aufsicht des Bundes. Sie erteilen 
+alle Bewilligungen, für die nach diesem Gesetz nicht eine Bundesbehörde zuständig 
+ist. 
+"""@de ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdpid> ;
+    ns1:ord 1 ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdpib> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdpib> .
+
+<http://example.org/bundesgesetzberdiejagdpid> a ns1:Absatz ;
+    ns1:content """2 Die kantonalen Ausführungsbestimmungen zur Verlängerung der Schonzeiten und 
+Einschränkung der Liste der jagdbaren Arten (Art. 5 Abs. 4), zum Schutz der Tiere 
+vor  Störung  (Art.  7  Abs.  4),  zum  Schutz  der  Muttertiere,  Jungtiere  und  Altvögel 
+(Art. 7 Abs.  5) sowie  zu  den  Selbsthilfemassnahmen  (Art.  12  Abs.  3)  bedürfen  zur 
+Gültigkeit der Genehmigung des Bundes33. 
+"""@de ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdpif> ;
+    ns1:ord 2 ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdpib> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdpic> .
+
+<http://example.org/bundesgesetzberdiejagdpif> a ns1:Artikel ;
+    ns1:content """Die Kantone regeln für den Vollzug dieses Gesetzes die Durchsuchung von Räumen 
+und  Einrichtungen  sowie  die  Beschlagnahme  von  Gegenständen.  Sie  verleihen  den 
+Vollzugsorganen die Eigenschaft von Beamten der gerichtlichen Polizei. 
+"""@de ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdpig> ;
+    ns1:ord 26 ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdpi9> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdpid> ;
+    ns1:title """Art. 26 
+
+Durchsuchungsrecht und Beschlagnahme 
+"""@de .
+
+<http://example.org/bundesgesetzberdiejagdpij> a ns1:Absatz ;
+    ns1:content """1. Das Bundesgesetz vom 10. Juni 192535 über Jagd und Vogelschutz  
+wird aufgehoben. 
+"""@de ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdpik> ;
+    ns1:ord 1 ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdpih> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdpih> .
+
+<http://example.org/bundesgesetzberdiejagdpik> a ns1:Absatz ;
+    ns1:content "2. und 3. ...36"@de ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdpim> ;
+    ns1:ord 2 ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdpih> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdpij> .
+
+<http://example.org/bundesgesetzberdiejagdpim> a ns1:Artikel ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdpin> ;
+    ns1:ord 28 ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdpig> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdpik> ;
+    ns1:title "Art. 2837"@de .
+
+<http://example.org/bundesgesetzberdiejagdpio> a ns1:Absatz ;
+    ns1:content """1 Dieses Gesetz untersteht dem fakultativen Referendum. 
+"""@de ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdpip> ;
+    ns1:ord 1 ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdpin> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdpin> .
+
+<http://example.org/bundesgesetzberdiejagdpgd> a ns1:Abschnitt ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdpge> ;
+    ns1:ord 5 ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdpdh> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdpgc> ;
+    ns1:title """5. Abschnitt: Information, Ausbildung und Forschung 
+"""@de .
+
+<http://example.org/bundesgesetzberdiejagdpgv> a ns1:Artikel ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdpgw> ;
+    ns1:ord 17 ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdpgu> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdpgu> ;
+    ns1:title """Art. 17 
+
+Vergehen 
+"""@de .
+
+<http://example.org/bundesgesetzberdiejagdpdi> a ns1:Abschnitt ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdpdj> ;
+    ns1:ord 1 ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdpdh> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdpdh> ;
+    ns1:title """1. Abschnitt: Zweck und Geltungsbereich 
+"""@de .
+
+<http://example.org/bundesgesetzberdiejagdpdj> a ns1:Artikel ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdpdk> ;
+    ns1:ord 1 ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdpdi> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdpdi> ;
+    ns1:title """Art. 1 
+
+Zweck 
+"""@de .
+
+<http://example.org/bundesgesetzberdiejagdpeu> a ns1:Absatz ;
+    ns1:content """3 Während des ganzen Jahres können gejagt werden: 
+"""@de ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdpev> ;
+    ns1:ord 3 ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdpe9> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdpet> .
+
+<http://example.org/bundesgesetzberdiejagdpf2> a ns1:Artikel ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdpf3> ;
+    ns1:ord 6 ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdpdx> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdpez> ;
+    ns1:title """Art. 6 
+
+Aussetzen von Tieren der jagdbaren Arten 
+"""@de .
+
+<http://example.org/bundesgesetzberdiejagdpfe> a ns1:Artikel ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdpff> ;
+    ns1:ord 9 ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdpf5> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdpfd> ;
+    ns1:title """Art. 9 
+
+Bewilligungen des Bundes 
+"""@de .
+
+<http://example.org/bundesgesetzberdiejagdpfo> a ns1:Artikel ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdpfp> ;
+    ns1:ord 10 ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdpf5> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdpfk> ;
+    ns1:title """Art. 10 
+
+Haltung geschützter Tiere 
+"""@de .
+
+<http://example.org/bundesgesetzberdiejagdpfy> a ns1:Abschnitt ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdpfz> ;
+    ns1:ord 4 ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdpdh> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdpfx> ;
+    ns1:title """4. Abschnitt: Wildschaden 
+"""@de .
+
+<http://example.org/bundesgesetzberdiejagdpgk> a ns1:Abschnitt ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdpgm> ;
+    ns1:ord 6 ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdpdh> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdpgj> ;
+    ns1:title """6. Abschnitt: Haftpflicht und Versicherung 
+"""@de .
+
+<http://example.org/bundesgesetzberdiejagdpgm> a ns1:Artikel ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdpgn> ;
+    ns1:ord 15 ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdpgk> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdpgk> ;
+    ns1:title """Art. 15 
+
+Haftpflicht 
+"""@de .
+
+<http://example.org/bundesgesetzberdiejagdphs> a ns1:Absatz ;
+    ns1:content """1 Die  Jagdberechtigung  wird  vom  Richter  für  mindestens  ein  Jahr  und  höchstens 
+zehn Jahre entzogen, wenn der Träger der Berechtigung: 
+"""@de ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdpht> ;
+    ns1:ord 1 ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdphr> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdphr> .
+
+<http://example.org/bundesgesetzberdiejagdpib> a ns1:Artikel ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdpic> ;
+    ns1:ord 25 ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdpi9> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdpia> ;
+    ns1:title """Art. 25 
+
+Vollzug durch die Kantone32 
+"""@de .
+
+<http://example.org/bundesgesetzberdiejagdpih> a ns1:Artikel ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdpij> ;
+    ns1:ord 27 ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdpig> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdpig> ;
+    ns1:title """Art. 27 
+
+Aufhebung und Änderung von Bundesgesetzen 
+"""@de .
+
+<http://example.org/bundesgesetzberdiejagdpin> a ns1:Artikel ;
+    ns1:content """Datum des Inkrafttretens: 1. April 198838 
+"""@de ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdpio> ;
+    ns1:ord 29 ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdpig> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdpim> ;
+    ns1:title """Art. 29 
+
+Referendum und Inkrafttreten 
+"""@de .
+
+<http://example.org/bundesgesetzberdiejagdpe5> a ns1:Artikel ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdpe6> ;
+    ns1:ord 4 ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdpdx> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdpe4> ;
+    ns1:title """Art. 4 
+
+Jagdberechtigung 
+"""@de .
+
+<http://example.org/bundesgesetzberdiejagdphr> a ns1:Artikel ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdphs> ;
+    ns1:ord 20 ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdpgu> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdphq> ;
+    ns1:title """Art. 20 
+
+Entzug und Verweigerung der Jagdberechtigung 
+"""@de .
+
+<http://example.org/bundesgesetzberdiejagdphx> a ns1:Abschnitt ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdphy> ;
+    ns1:ord 8 ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdpdh> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdphw> ;
+    ns1:title """8. Abschnitt: Strafverfahren 
+"""@de .
+
+<http://example.org/bundesgesetzberdiejagdphy> a ns1:Artikel ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdphz> ;
+    ns1:ord 21 ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdphx> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdphx> ;
+    ns1:title """Art. 21 
+
+Strafverfolgung 
+"""@de .
+
+<http://example.org/bundesgesetzberdiejagdpi4> a ns1:Artikel ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdpi5> ;
+    ns1:ord 22 ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdphx> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdpi3> ;
+    ns1:title """Art. 2228 
+
+Mitteilungspflicht 
+"""@de .
+
+<http://example.org/bundesgesetzberdiejagdpi9> a ns1:Abschnitt ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdpia> ;
+    ns1:ord 9 ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdpdh> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdpi8> ;
+    ns1:title """9. Abschnitt: Vollzug und Verfahren30 
+"""@de .
+
+<http://example.org/bundesgesetzberdiejagdpig> a ns1:Abschnitt ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdpih> ;
+    ns1:ord 10 ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdpdh> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdpif> ;
+    ns1:title """10. Abschnitt: Schlussbestimmungen 
+"""@de .
+
+<http://example.org/bundesgesetzberdiejagdpdk> a ns1:Absatz ;
+    ns1:content """1 Dieses Gesetz bezweckt: 
+"""@de ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdpdm> ;
+    ns1:ord 1 ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdpdj> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdpdj> .
+
+<http://example.org/bundesgesetzberdiejagdpdx> a ns1:Abschnitt ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdpdy> ;
+    ns1:ord 2 ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdpdh> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdpdw> ;
+    ns1:title """2. Abschnitt: Jagd 
+"""@de .
+
+<http://example.org/bundesgesetzberdiejagdpdy> a ns1:Artikel ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdpdz> ;
+    ns1:ord 3 ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdpdx> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdpdx> ;
+    ns1:title """Art. 3 
+
+Grundsätze 
+"""@de .
+
+<http://example.org/bundesgesetzberdiejagdpff> a ns1:Absatz ;
+    ns1:content """1 Eine Bewilligung des Bundes braucht, wer: 
+"""@de ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdpfg> ;
+    ns1:ord 1 ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdpfe> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdpfe> .
+
+<http://example.org/bundesgesetzberdiejagdpg8> a ns1:Artikel ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdpg9> ;
+    ns1:ord 13 ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdpfy> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdpg7> ;
+    ns1:title """Art. 13 
+
+Entschädigung von Wildschaden 
+"""@de .
+
+<http://example.org/bundesgesetzberdiejagdpgp> a ns1:Artikel ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdpgq> ;
+    ns1:ord 16 ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdpgk> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdpgo> ;
+    ns1:title """Art. 16 
+
+Versicherung 
+"""@de .
+
+<http://example.org/bundesgesetzberdiejagdpgu> a ns1:Abschnitt ;
+    ns1:ord 7 ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdpdh> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdpgt> ;
+    ns1:title """7. Abschnitt: Strafbestimmungen
+ """@de .
+
+<http://example.org/bundesgesetzberdiejagdpdr> a ns1:Artikel ;
+    ns1:content """Dieses Gesetz bezieht sich auf die folgenden in der Schweiz wildlebenden Tiere: 
+"""@de ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdpds> ;
+    ns1:ord 2 ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdpdi> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdpdq> ;
+    ns1:title """Art. 2 
+
+Geltungsbereich 
+"""@de .
+
+<http://example.org/bundesgesetzberdiejagdpf5> a ns1:Abschnitt ;
+    ns1:ord 3 ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdpdh> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdpf4> ;
+    ns1:title """3. Abschnitt: Schutz 
+"""@de .
+
+<http://example.org/bundesgesetzberdiejagdpf6> a ns1:Artikel ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdpf7> ;
+    ns1:ord 7 ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdpf5> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdpf5> ;
+    ns1:title """Art. 7 
+
+Artenschutz 
+"""@de .
+
+<http://example.org/bundesgesetzberdiejagdpfz> a ns1:Artikel ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdpg3> ;
+    ns1:ord 12 ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdpfy> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdpfy> ;
+    ns1:title """Art. 12 
+
+Verhütung von Wildschaden 
+"""@de .
+
+<http://example.org/bundesgesetzberdiejagdpge> a ns1:Artikel ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdpgf> ;
+    ns1:ord 14 ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdpgd> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdpgd> ;
+    ns1:title """Art. 14 
+"""@de .
+
+<http://example.org/bundesgesetzberdiejagdphb> a ns1:Artikel ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdphc> ;
+    ns1:ord 18 ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdpgu> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdpha> ;
+    ns1:title """Art. 18 
+
+Übertretungen 
+"""@de .
+
+<http://example.org/bundesgesetzberdiejagdpe9> a ns1:Artikel ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdpeb> ;
+    ns1:ord 5 ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdpdx> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdpe8> ;
+    ns1:title """Art. 5 
+
+Jagdbare Arten und Schonzeiten 
+"""@de .
+
+<http://example.org/bundesgesetzberdiejagdpfr> a ns1:Artikel ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdpfs> ;
+    ns1:ord 11 ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdpf5> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdpfq> ;
+    ns1:title """Art. 11 
+
+Schutzgebiete 
+"""@de .
+
+<http://example.org/bundesgesetzberdiejagdphc> a ns1:Absatz ;
+    ns1:content """1 Mit Busse bis zu 20 000 Franken wird bestraft, wer vorsätzlich und ohne Berechti-
+gung:18 
+"""@de ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdphd> ;
+    ns1:ord 1 ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdphb> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdphb> .
+
+<http://example.org/bundesgesetzberdiejagdpdh> a ns1:Bundesgesetz ;
+    ns1:content """Die Bundesversammlung der Schweizerischen Eidgenossenschaft, 
+gestützt auf die Artikel 74 Absatz 1, 78 Absatz 4, 79 und 80 Absatz 1  
+der Bundesverfassung1,2  
+nach Einsicht in eine Botschaft des Bundesrates vom 27. April 19833 
+beschliesst: 
+"""@de ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdpdi> ;
+    ns1:title """Bundesgesetz  
+über die Jagd und den Schutz  
+wildlebender Säugetiere und Vögel 
+(Jagdgesetz, JSG) 
+
+vom 20. Juni 1986 (Stand am 1. Januar 2022) 
+"""@de .
+
+<http://example.org/bundesgesetzberdiejagdpgw> a ns1:Absatz ;
+    ns1:content """1 Mit Freiheitsstrafe bis zu einem Jahr oder Geldstrafe wird bestraft, wer vorsätzlich 
+und ohne Berechtigung:16 
+"""@de ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdpgx> ;
+    ns1:ord 1 ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdpgv> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdpgv> .
+
+<http://example.org/bundesgesetzberdiejagdpeb> a ns1:Absatz ;
+    ns1:content """1 Die jagdbaren Arten und die Schonzeiten werden wie folgt festgelegt: 
+"""@de ;
+    ns1:next <http://example.org/bundesgesetzberdiejagdpec> ;
+    ns1:ord 1 ;
+    ns1:parent <http://example.org/bundesgesetzberdiejagdpe9> ;
+    ns1:prev <http://example.org/bundesgesetzberdiejagdpe9> .
+

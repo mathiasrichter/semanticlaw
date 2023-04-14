@@ -215,7 +215,7 @@ class CharacterOrdinal:
             return 0
         if frame1.ord is None and frame2.ord is None:
             return 1        
-        return self.num_ord(frame1.ord) - self.num_ord(frame2.ord)
+        return self.num_ord(frame1.ord.lower()) - self.num_ord(frame2.ord.lower())
     
     def sort(self, items : list[Frame]):
         return sorted(items, key=cmp_to_key(self.compare))
@@ -346,7 +346,7 @@ class Collector(SequencedStack):
         siblings = list(filter(lambda f: f.type==clazz and f.parent==parent and f.ord is not None and type(f.ord) == str, self.sequence))
         siblings = self.CHAR_ORD.sort(siblings)
         if len(siblings) > 0:
-            return self.CHAR_ORD.next(siblings[-1].ord)
+            return self.CHAR_ORD.next(siblings[-1].ord.lower())
         else:
             return 'a'
         
@@ -393,26 +393,35 @@ class Collector(SequencedStack):
             raise StructureError("Cannot open content scope in {}".format(self.top().type))
         self.start_collect(self.CONT)
     
-    def new_abschnitt(self):
+    def new_int_abschnitt(self):
         if self.top() and self.top().type in [self.TITLE, self.CONT, self.ART, self.PAR, self.ABS, self.LIT]:
             raise StructureError("Cannot open abschnitt scope in {}".format(self.top().type))
         f = Frame(self.new_id(), line_no=self.text.line_no, type=self.ABSCH)
         self.push(f)
         f.ord = self.get_next_int_ord(self.ABSCH, f.parent)
         
-    def new_article(self):
+    def new_char_abschnitt(self):
+        if self.top() and self.top().type in [self.TITLE, self.CONT, self.ART, self.PAR, self.ABS, self.LIT]:
+            raise StructureError("Cannot open abschnitt scope in {}".format(self.top().type))
+        f = Frame(self.new_id(), line_no=self.text.line_no, type=self.ABSCH)
+        self.push(f)
+        f.ord = self.get_next_char_ord(self.ABSCH, f.parent).upper()
+        
+    def new_article(self, increment:bool = True):
         if self.top() and self.top().type in [self.TITLE, self.CONT, self.ART, self.PAR, self.ABS, self.LIT]:
             raise StructureError("Cannot open article scope in {}".format(self.top().type))
         f = Frame(self.new_id(), line_no=self.text.line_no, type=self.ART)
         self.push(f)
-        f.ord = self.get_next_int_ord(self.ART, f.parent)
+        if increment is True:
+            f.ord = self.get_next_int_ord(self.ART, f.parent)
         
-    def new_paragraph(self):
+    def new_paragraph(self, increment:bool = True):
         if self.top() and self.top().type in [self.TITLE, self.CONT, self.ART, self.PAR, self.ABS, self.LIT]:
             raise StructureError("Cannot open paragraph scope in {}".format(self.top().type))
         f = Frame(self.new_id(), line_no=self.text.line_no, type=self.PAR)
         self.push(f)
-        f.ord = self.get_next_int_ord(self.PAR, f.parent)
+        if increment is True:
+            f.ord = self.get_next_int_ord(self.PAR, f.parent)
 
     def new_absatz(self):
         if self.top() and self.top().type in [self.TITLE, self.CONT, self.ABS, self.LIT, self.BG, self.BV, self.KG, self.KV, self.KVO]:
@@ -481,6 +490,9 @@ class CommandlineCollector(cmd2.Cmd):
         self.print_status()
         
     def do_new(self, line:str):
+        is_true = False
+        if "true" in line.lower():
+            is_true = True
         if line.lower() == self.collector.BG.lower():
             self.collector.new_document(line)
         elif line.lower() == self.collector.BV.lower():
@@ -492,14 +504,23 @@ class CommandlineCollector(cmd2.Cmd):
         elif line.lower() == self.collector.KVO.lower():
             self.collector.new_document(line)
         elif self.collector.ABSCH.lower().startswith(line.lower()):
-            self.collector.new_abschnitt()
+            if is_true:
+                self.collector.new_char_abschnitt()
+            else:
+                self.collector.new_int_abschnitt()
         elif self.collector.ABS.lower().startswith(line.lower()):
             self.collector.new_absatz()
             self.collector.new_content()
         elif self.collector.PAR.lower().startswith(line.lower()):
-            self.collector.new_paragraph()
+            if is_true:
+                self.collector.new_paragraph(increment=False)
+            else:
+                self.collector.new_paragraph()
         elif self.collector.ART.lower().startswith(line.lower()):
-            self.collector.new_article()
+            if is_true:
+                self.collector.new_article(increment=False)
+            else:
+                self.collector.new_article()
         elif self.collector.LIT.lower().startswith(line.lower()):
             self.collector.new_litera()
             self.collector.new_content()
@@ -569,6 +590,13 @@ class CommandlineCollector(cmd2.Cmd):
 
     def do_restorestate(self, line:str):
         self.collector.deserialize(line)
+        self.print_status()
+        
+    def do_validate(self, line):
+        data = self.collector.build_graph()
+        model = Graph().parse("swisslaw.ttl", format="ttl")
+        a, b, result = validate(data+model)
+        print(result)
         self.print_status()
 
 if __name__ == "__main__":

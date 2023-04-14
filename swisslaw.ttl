@@ -12,20 +12,6 @@
 :TextElement a rdfs:Class ;
 .
 
-:numOrdinal a rdfs:Property ;
-    rdfs:domain :TextElement ;
-    rdfs:range :TextElement ;
-    sh:path :numberOrdinal ;
-    sh:datatype xsd:integer ;
-.
-
-:charOrdinal a rdfs:Property ;
-    rdfs:domain :TextElement ;
-    rdfs:range :TextElement ;
-    sh:path :charOrdinal ;
-    sh:datatype xsd:string ;
-.
-
 :next a rdfs:Property ;
     rdfs:domain :TextElement ;
     rdfs:range :TextElement ;
