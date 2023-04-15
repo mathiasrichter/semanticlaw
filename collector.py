@@ -407,20 +407,24 @@ class Collector(SequencedStack):
         self.push(f)
         f.ord = self.get_next_char_ord(self.ABSCH, f.parent).upper()
         
-    def new_article(self, increment:bool = True):
+    def new_article(self, ord:str = None):
         if self.top() and self.top().type in [self.TITLE, self.CONT, self.ART, self.PAR, self.ABS, self.LIT]:
             raise StructureError("Cannot open article scope in {}".format(self.top().type))
         f = Frame(self.new_id(), line_no=self.text.line_no, type=self.ART)
         self.push(f)
-        if increment is True:
+        if ord is not None:
+            f.ord = ord
+        else:
             f.ord = self.get_next_int_ord(self.ART, f.parent)
         
-    def new_paragraph(self, increment:bool = True):
+    def new_paragraph(self, ord:str = None):
         if self.top() and self.top().type in [self.TITLE, self.CONT, self.ART, self.PAR, self.ABS, self.LIT]:
             raise StructureError("Cannot open paragraph scope in {}".format(self.top().type))
         f = Frame(self.new_id(), line_no=self.text.line_no, type=self.PAR)
         self.push(f)
-        if increment is True:
+        if ord is not None:
+            f.ord = ord
+        else:
             f.ord = self.get_next_int_ord(self.PAR, f.parent)
 
     def new_absatz(self):
@@ -490,38 +494,40 @@ class CommandlineCollector(cmd2.Cmd):
         self.print_status()
         
     def do_new(self, line:str):
-        is_true = False
-        if "true" in line.lower():
-            is_true = True
-        if line.lower() == self.collector.BG.lower():
+        match = re.search("(\w+)(( )(\w+)){0,1}$", line)
+        type = ""
+        set_char_ord = None
+        if match is not None:
+            type = match.group(1).lower()
+            set_char_ord = match.group(4)
+        if type == self.collector.BG.lower():
             self.collector.new_document(line)
-        elif line.lower() == self.collector.BV.lower():
+        elif type == self.collector.BV.lower():
             self.collector.new_document(line)
-        elif line.lower() == self.collector.KG.lower():
+        elif type == self.collector.KG.lower():
             self.collector.new_document(line)
-        elif line.lower() == self.collector.KV.lower():
+        elif type == self.collector.KV.lower():
             self.collector.new_document(line)
-        elif line.lower() == self.collector.KVO.lower():
+        elif type == self.collector.KVO.lower():
             self.collector.new_document(line)
-        elif self.collector.ABSCH.lower().startswith(line.lower()):
-            if is_true:
+        elif self.collector.ABSCH.lower().startswith(type):
+            if set_char_ord is not None:
                 self.collector.new_char_abschnitt()
             else:
                 self.collector.new_int_abschnitt()
-        elif self.collector.ABS.lower().startswith(line.lower()):
+        elif self.collector.ABS.lower().startswith(type):
             self.collector.new_absatz()
-            self.collector.new_content()
-        elif self.collector.PAR.lower().startswith(line.lower()):
-            if is_true:
-                self.collector.new_paragraph(increment=False)
+        elif self.collector.PAR.lower().startswith(type):
+            if set_char_ord:
+                self.collector.new_paragraph(set_char_ord)
             else:
                 self.collector.new_paragraph()
-        elif self.collector.ART.lower().startswith(line.lower()):
-            if is_true:
-                self.collector.new_article(increment=False)
+        elif self.collector.ART.lower().startswith(type):
+            if set_char_ord:
+                self.collector.new_article(set_char_ord)
             else:
                 self.collector.new_article()
-        elif self.collector.LIT.lower().startswith(line.lower()):
+        elif self.collector.LIT.lower().startswith(type):
             self.collector.new_litera()
             self.collector.new_content()
         else:
@@ -529,7 +535,7 @@ class CommandlineCollector(cmd2.Cmd):
         self.print_status()
 
     def do_end(self, line):
-        if self.collector.last().type in [ self.collector.LIT, self.collector.ABS ] and self.collector.is_collecting():
+        if self.collector.last().type in [ self.collector.LIT ] and self.collector.is_collecting():
             self.collector.end()
         self.collector.end()
         self.print_status()
